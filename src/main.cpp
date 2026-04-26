@@ -1,10 +1,12 @@
+#include "../include/Menu.h"
+#include "../include/Parser.h"
 #include <iostream>
-#include "Menu.h"
-#include "Parser.h"
+
+#include "../include/memtrace.h"
 
 int main() {
-    Parser adatbazis;
-    Menu foMenu(adatbazis);
-    foMenu.start();
-    return 0;
+  Parser adatbazis;
+  Menu foMenu(adatbazis);
+  foMenu.start();
+  return 0;
 }
