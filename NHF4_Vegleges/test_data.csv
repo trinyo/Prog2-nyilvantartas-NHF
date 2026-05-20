@@ -1,0 +1,41 @@
+Tipus:Oktato;Nev:Dr. Tóth Pál;Kod:TP01;Titulus:PhD;Tanszek:IIT;Email:toth.pal@uni-pannon.hu;Iroda:I-123;Targy:Programozás 1;Csoport:G01;Csoport:G02;Csoport:G05;Max_Csoport:10
+Tipus:Oktato;Nev:Dr. Nagy Mária;Kod:NM02;Titulus:MSc;Tanszek:TMIT;Email:nagy.maria@uni-pannon.hu;Iroda:II-204;Targy:Adatbázisok;Csoport:G03;Csoport:G04;Max_Csoport:8
+Tipus:Oktato;Nev:Dr. Kovács János;Kod:KJ03;Titulus:PhD;Tanszek:VIT;Email:kovacs.j@uni-pannon.hu;Iroda:III-45;Targy:Számítógép hálózatok;Csoport:G06;Csoport:G07;Max_Csoport:6
+Tipus:Oktato;Nev:Dr. Szabó Eszter;Kod:SE04;Titulus:PhD;Tanszek:IIT;Email:szabo.eszter@uni-pannon.hu;Iroda:I-005;Targy:Szoftver labor;Csoport:G01;Csoport:G03;Csoport:G05;Max_Csoport:12
+Tipus:Oktato;Nev:Dr. Tóth Gábor;Kod:TG05;Titulus:MSc;Tanszek:TMIT;Email:toth.gabor@uni-pannon.hu;Iroda:II-101;Targy:Web technológiák;Csoport:G02;Csoport:G04;Csoport:G08;Max_Csoport:15
+Tipus:Oktato;Nev:Dr. Horváth Anna;Kod:HA06;Titulus:PhD;Tanszek:IIT;Email:horvath.anna@uni-pannon.hu;Iroda:I-222;Targy:Algoritmusok;Csoport:G09;Csoport:G10;Max_Csoport:5
+Tipus:Oktato;Nev:Dr. Kiss Béla;Kod:KB07;Titulus:MSc;Tanszek:VIT;Email:kiss.bela@uni-pannon.hu;Iroda:III-12;Targy:Műszaki dokumentáció;Csoport:G11;Csoport:G12;Max_Csoport:4
+Tipus:Oktato;Nev:Dr. Papp Rita;Kod:PR08;Titulus:PhD;Tanszek:TMIT;Email:papp.rita@uni-pannon.hu;Iroda:II-301;Targy:XML technológiák;Csoport:G01;Max_Csoport:3
+Tipus:Oktato;Nev:Dr. Farkas László;Kod:FL09;Titulus:PhD;Tanszek:IIT;Email:farkas.l@uni-pannon.hu;Iroda:I-044;Targy:Programtervezés;Csoport:G13;Csoport:G14;Csoport:G15;Max_Csoport:20
+Tipus:Oktato;Nev:Dr. Balogh Éva;Kod:BE10;Titulus:MSc;Tanszek:VIT;Email:balogh.eva@uni-pannon.hu;Iroda:III-88;Targy:Grafika;Csoport:G16;Csoport:G17;Max_Csoport:7
+Tipus:Oktato;Nev:Dr. Szekér Andrea;Kod:SA11;Titulus:PhD;Tanszek:IIT;Email:szeker.andrea@uni-pannon.hu;Iroda:I-330;Targy:Adatstruktúrák;Csoport:G01;Csoport:G02;Max_Csoport:8
+Tipus:Oktato;Nev:Dr. Varga Mihály;Kod:VM12;Titulus:MSc;Tanszek:TMIT;Email:varga.mihaly@uni-pannon.hu;Iroda:II-201;Targy:Adatbázis 2;Csoport:G03;Csoport:G04;Max_Csoport:10
+Tipus:Oktato;Nev:Dr. Nagy Barbara;Kod:NB13;Titulus:PhD;Tanszek:VIT;Email:nagy.barbara@uni-pannon.hu;Iroda:III-55;Targy:Hálózatbiztonság;Csoport:G05;Csoport:G06;Max_Csoport:6
+Tipus:Oktato;Nev:Dr. Takács Gergő;Kod:TG14;Titulus:MSc;Tanszek:IIT;Email:takacs.gergo@uni-pannon.hu;Iroda:I-112;Targy:Mobil alkalmazások;Csoport:G07;Csoport:G08;Max_Csoport:12
+Tipus:Oktato;Nev:Dr. Lukács Eszter;Kod:LE15;Titulus:PhD;Tanszek:TMIT;Email:lukacs.eszter@uni-pannon.hu;Iroda:II-401;Targy:Mesterséges intelligencia;Csoport:G09;Csoport:G10;Max_Csoport:5
+Tipus:Hallgato;Nev:Kiss Anna;Kod:AABBCC;Szak:Mérnökinformatikus;Felev:2;Email:k.anna@stud.uni.hu;Csoport:G01;Hianyzas:2;ZH:15.5;ZH:18.0;ZH:0.0;ZH:0.0;ZH:0.0;NZH:33.5;Vizsga:42.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Nagy Péter;Kod:NP001;Szak:Mérnökinformatikus;Felev:1;Email:n.peter@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:20.0;ZH:19.5;ZH:18.0;ZH:17.5;ZH:16.0;NZH:91.0;Vizsga:95.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Szabó János;Kod:SJ002;Szak:Mérnökinformatikus;Felev:3;Email:s.janos@stud.uni.hu;Csoport:G03;Hianyzas:4;ZH:12.0;ZH:14.0;ZH:11.0;ZH:13.0;ZH:10.0;NZH:60.0;Vizsga:72.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Kovács Mariann;Kod:KM003;Szak:Mérnökinformatikus;Felev:2;Email:k.mariann@stud.uni.hu;Csoport:G01;Hianyzas:1;ZH:17.5;ZH:16.0;ZH:18.5;ZH:19.0;ZH:15.0;NZH:86.0;Vizsga:88.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Tóth Gergő;Kod:TG004;Szak:Mérnökinformatikus;Felev:4;Email:t.gergo@stud.uni.hu;Csoport:G04;Hianyzas:6;ZH:8.0;ZH:10.0;ZH:9.0;ZH:7.5;ZH:8.5;NZH:43.0;Vizsga:55.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Lukács Viktória;Kod:LV005;Szak:Mérnökinformatikus;Felev:1;Email:l.viktoria@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:19.0;ZH:20.0;ZH:18.5;ZH:19.5;ZH:20.0;NZH:97.0;Vizsga:98.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Balogh Tamás;Kod:BT006;Szak:Mérnökinformatikus;Felev:3;Email:b.tamas@stud.uni.hu;Csoport:G03;Hianyzas:3;ZH:13.5;ZH:12.0;ZH:14.5;ZH:11.0;ZH:13.0;NZH:64.0;Vizsga:70.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Papp Nikolett;Kod:PN007;Szak:Mérnökinformatikus;Felev:2;Email:p.nikolett@stud.uni.hu;Csoport:G01;Hianyzas:2;ZH:16.0;ZH:15.5;ZH:17.0;ZH:16.5;ZH:15.0;NZH:80.0;Vizsga:85.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Farkas Attila;Kod:FA008;Szak:Mérnökinformatikus;Felev:4;Email:f.attila@stud.uni.hu;Csoport:G04;Hianyzas:8;ZH:5.0;ZH:6.0;ZH:4.5;ZH:5.5;ZH:6.0;NZH:27.0;Vizsga:35.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Horváth Eszter;Kod:HE009;Szak:Mérnökinformatikus;Felev:1;Email:h.eszter@stud.uni.hu;Csoport:G02;Hianyzas:1;ZH:18.5;ZH:17.0;ZH:19.0;ZH:18.0;ZH:17.5;NZH:90.0;Vizsga:92.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Nagy Henriett;Kod:NH010;Szak:Mérnökinformatikus;Felev:3;Email:n.henriett@stud.uni.hu;Csoport:G03;Hianyzas:5;ZH:10.0;ZH:11.5;ZH:9.5;ZH:10.5;ZH:11.0;NZH:52.5;Vizsga:60.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Kiss Bence;Kod:KB011;Szak:Mérnökinformatikus;Felev:2;Email:k.bence@stud.uni.hu;Csoport:G01;Hianyzas:0;ZH:17.0;ZH:18.5;ZH:16.5;ZH:17.5;ZH:18.0;NZH:88.0;Vizsga:90.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Szentpéteri Gábor;Kod:SG012;Szak:Mérnökinformatikus;Felev:4;Email:s.gabor@stud.uni.hu;Csoport:G04;Hianyzas:7;ZH:6.5;ZH:7.0;ZH:5.5;ZH:6.0;ZH:7.5;NZH:32.5;Vizsga:40.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Tóth Adrienn;Kod:TA013;Szak:Mérnökinformatikus;Felev:1;Email:t.adrienn@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:19.5;ZH:20.0;ZH:19.0;ZH:18.5;ZH:20.0;NZH:97.0;Vizsga:99.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Kovács Zoltán;Kod:KZ014;Szak:Mérnökinformatikus;Felev:3;Email:k.zoltan@stud.uni.hu;Csoport:G03;Hianyzas:4;ZH:11.0;ZH:12.5;ZH:10.5;ZH:11.5;ZH:12.0;NZH:57.5;Vizsga:65.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Molnár Szonja;Kod:MS015;Szak:Mérnökinformatikus;Felev:2;Email:m.szonja@stud.uni.hu;Csoport:G01;Hianyzas:1;ZH:16.5;ZH:17.5;ZH:16.0;ZH:17.0;ZH:16.5;NZH:83.5;Vizsga:86.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Brown Michael;Kod:BM016;Szak:Mérnökinformatikus;Felev:4;Email:b.michael@stud.uni.hu;Csoport:G04;Hianyzas:9;ZH:4.0;ZH:3.5;ZH:4.5;ZH:3.0;ZH:4.0;NZH:19.0;Vizsga:25.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Smith Jennifer;Kod:SJ017;Szak:Mérnökinformatikus;Felev:1;Email:s.jennifer@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:20.0;ZH:20.0;ZH:19.5;ZH:20.0;ZH:20.0;NZH:99.5;Vizsga:100.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Györgyi Dániel;Kod:GD018;Szak:Mérnökinformatikus;Felev:3;Email:g.daniel@stud.uni.hu;Csoport:G03;Hianyzas:3;ZH:13.0;ZH:12.0;ZH:14.0;ZH:11.5;ZH:13.5;NZH:64.0;Vizsga:68.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Varga Róbert;Kod:VR019;Szak:Mérnökinformatikus;Felev:2;Email:v.robert@stud.uni.hu;Csoport:G01;Hianyzas:2;ZH:15.5;ZH:16.0;ZH:15.0;ZH:16.5;ZH:15.5;NZH:78.5;Vizsga:82.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Simon Petra;Kod:SP020;Szak:Mérnökinformatikus;Felev:4;Email:s.petra@stud.uni.hu;Csoport:G04;Hianyzas:6;ZH:7.5;ZH:8.0;ZH:7.0;ZH:8.5;ZH:7.5;NZH:38.5;Vizsga:45.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Orbán Roland;Kod:OR021;Szak:Mérnökinformatikus;Felev:1;Email:o.roland@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:18.0;ZH:19.0;ZH:17.5;ZH:18.5;ZH:19.0;NZH:92.0;Vizsga:94.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Németh Kata;Kod:NK022;Szak:Mérnökinformatikus;Felev:2;Email:n.kata@stud.uni.hu;Csoport:G01;Hianyzas:1;ZH:16.0;ZH:17.5;ZH:16.5;ZH:18.0;ZH:17.0;NZH:85.0;Vizsga:88.0;Osztondij:Igen
+Tipus:Hallgato;nev:Fehér Dávid;Kod:FD023;Szak:Mérnökinformatikus;Felev:3;Email:f.david@stud.uni.hu;Csoport:G03;Hianyzas:2;ZH:14.0;ZH:15.0;ZH:13.5;ZH:14.5;ZH:14.0;NZH:71.0;Vizsga:75.0;Osztondij:Nem
+Tipus:Hallgato;Nev:Jakab Luca;Kod:JL024;Szak:Mérnökinformatikus;Felev:1;Email:j.luca@stud.uni.hu;Csoport:G02;Hianyzas:0;ZH:19.5;ZH:20.0;ZH:18.0;ZH:19.5;ZH:20.0;NZH:97.0;Vizsga:99.0;Osztondij:Igen
+Tipus:Hallgato;Nev:Kádár Kitti;Kod:KK025;Szak:Mérnökinformatikus;Felev:2;Email:k.kitti@stud.uni.hu;Csoport:G01;Hianyzas:0;ZH:18.5;ZH:19.0;ZH:18.0;ZH:19.5;ZH:18.5;NZH:93.5;Vizsga:95.0;Osztondij:Igen

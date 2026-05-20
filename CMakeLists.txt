@@ -37,3 +37,6 @@ set(SOURCES
 
 # 6. Futtatható állomány létrehozása
 add_executable(program.exe ${SOURCES})
+
+# 7. Teszt executable
+add_executable(test.exe src/test.cpp src/Szemely.cpp src/Hallgato.cpp src/Oktato.cpp src/Parser.cpp src/memtrace.cpp)

@@ -1,0 +1,126 @@
+\doxysection{Szemely Class Reference}
+\hypertarget{classSzemely}{}\label{classSzemely}\index{Szemely@{Szemely}}
+
+
+Alaposztaly a szemelyi adatok tarolasara.  
+
+
+
+
+{\ttfamily \+\#include $<$Szemely.\+h$>$}
+
+Inheritance diagram for Szemely:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSzemely}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classSzemely_aabc575221edae2931a6e6282980da1f8}{Szemely}} (std::\+string n, std::\+string k, std::\+string e)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\Hypertarget{classSzemely_ac36ec464741d4d9fdf633bd0bd020343}\label{classSzemely_ac36ec464741d4d9fdf633bd0bd020343} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Szemely} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+\Hypertarget{classSzemely_aa5ae9006b19c4f26bb3cffe637c771c4}\label{classSzemely_aa5ae9006b19c4f26bb3cffe637c771c4} 
+virtual void {\bfseries kiir} () const =0
+\begin{DoxyCompactList}\small\item\em Adatok kiirasa a konzolra. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSzemely_a5415f02f1a87753dfff8d093e746063e}{add\+Csoport}} (std::\+string cs)
+\begin{DoxyCompactList}\small\item\em Uj csoport hozzaadasa. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classSzemely_ab85865a920d7e2d711e9497e2e568ff6}{get\+Kod}} ()
+\item 
+size\+\_\+t \doxymbox{\hyperlink{classSzemely_afd5839b25f0cbbc1e420004de7733341}{get\+Csoport\+Szam}} ()
+\item 
+std::\+string \doxymbox{\hyperlink{classSzemely_a628fc39603b3f506910daf8e1be9b805}{get\+Csoport}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Csoport lekerese index alapjan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Alaposztaly a szemelyi adatok tarolasara. 
+
+Ez az osztaly abstrakt, leszarmaztatott osztalyok (\doxylink{classHallgato}{Hallgato}, \doxylink{classOktato}{Oktato}) adjak meg a konkret megvalositast. 
+
+\label{doc-constructors}
+\Hypertarget{classSzemely_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSzemely_aabc575221edae2931a6e6282980da1f8}\index{Szemely@{Szemely}!Szemely@{Szemely}}
+\index{Szemely@{Szemely}!Szemely@{Szemely}}
+\doxysubsubsection{\texorpdfstring{Szemely()}{Szemely()}}
+{\footnotesize\ttfamily \label{classSzemely_aabc575221edae2931a6e6282980da1f8} 
+Szemely::\+\+Szemely (\begin{DoxyParamCaption}\item[{std::\+string}]{n}{, }\item[{std::\+string}]{k}{, }\item[{std::\+string}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Nev \\
+\hline
+{\em k} & Kod \\
+\hline
+{\em e} & Email \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classSzemely_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSzemely_a5415f02f1a87753dfff8d093e746063e}\index{Szemely@{Szemely}!addCsoport@{addCsoport}}
+\index{addCsoport@{addCsoport}!Szemely@{Szemely}}
+\doxysubsubsection{\texorpdfstring{addCsoport()}{addCsoport()}}
+{\footnotesize\ttfamily \label{classSzemely_a5415f02f1a87753dfff8d093e746063e} 
+void Szemely::\+add\+Csoport (\begin{DoxyParamCaption}\item[{std::\+string}]{cs}{}\end{DoxyParamCaption})}
+
+
+
+Uj csoport hozzaadasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & Csoport neve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSzemely_a628fc39603b3f506910daf8e1be9b805}\index{Szemely@{Szemely}!getCsoport@{getCsoport}}
+\index{getCsoport@{getCsoport}!Szemely@{Szemely}}
+\doxysubsubsection{\texorpdfstring{getCsoport()}{getCsoport()}}
+{\footnotesize\ttfamily \label{classSzemely_a628fc39603b3f506910daf8e1be9b805} 
+std::\+string Szemely::\+get\+Csoport (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i}{}\end{DoxyParamCaption})}
+
+
+
+Csoport lekerese index alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Csoport neve 
+\end{DoxyReturn}
+\Hypertarget{classSzemely_afd5839b25f0cbbc1e420004de7733341}\index{Szemely@{Szemely}!getCsoportSzam@{getCsoportSzam}}
+\index{getCsoportSzam@{getCsoportSzam}!Szemely@{Szemely}}
+\doxysubsubsection{\texorpdfstring{getCsoportSzam()}{getCsoportSzam()}}
+{\footnotesize\ttfamily \label{classSzemely_afd5839b25f0cbbc1e420004de7733341} 
+size\+\_\+t Szemely::\+get\+Csoport\+Szam (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Csoportok szama 
+\end{DoxyReturn}
+\Hypertarget{classSzemely_ab85865a920d7e2d711e9497e2e568ff6}\index{Szemely@{Szemely}!getKod@{getKod}}
+\index{getKod@{getKod}!Szemely@{Szemely}}
+\doxysubsubsection{\texorpdfstring{getKod()}{getKod()}}
+{\footnotesize\ttfamily \label{classSzemely_ab85865a920d7e2d711e9497e2e568ff6} 
+std::\+string Szemely::\+get\+Kod (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Egyedi kod 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Szemely.\+h\end{DoxyCompactItemize}

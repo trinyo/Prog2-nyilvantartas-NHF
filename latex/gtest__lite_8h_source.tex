@@ -1,0 +1,380 @@
+\doxysection{gtest\+\_\+lite.\+h}
+\hypertarget{gtest__lite_8h_source}{}\label{gtest__lite_8h_source}\index{include/gtest\_lite.h@{include/gtest\_lite.h}}
+\doxymbox{\hyperlink{gtest__lite_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GTEST\_LITE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GTEST\_LITE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#\ include\ <iterator>}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#\ include\ <regex>}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#ifdef\ MEMTRACE}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#\ include\ "{}memtrace.h"{}}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{//\ Két\ makró\ az\ egyes\ tesztek\ elé\ és\ mögé:}}
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ A\ két\ makró\ a\ kapcsos\ zárójelekkel\ egy\ új\ blokkot\ hoz\ létre,\ amiben}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ a\ nevek\ lokálisak,\ így\ elkerülhető\ a\ névütközés.}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ TEST(C,\ N)\ do\ \{\ gtest\_lite::test.begin(\#C"{}."{}\#N);}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ END\ gtest\_lite::test.end();\ \}\ while\ (false);}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ ENDM\ gtest\_lite::test.end(true);\ \}\ while\ (false);}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ ENDMsg(t)\ gtest\_lite::test.end(true)\ <<\ t\ <<\ std::endl;\ \}\ while\ (false);}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{//\ Eredmények\ vizsgálatát\ segítő\ makrók.}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//\ A\ paraméterek\ és\ a\ funkciók\ a\ gtest\ keretrendszerrel\ megegyeznek.}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ SUCCEED()\ gtest\_lite::test.expect(true,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}SUCCEED()"{},\ true)}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ FAIL()\ gtest\_lite::test.expect(false,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}FAIL()"{},\ true)}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#define\ ADD\_FAILURE()\ gtest\_lite::test.expect(false,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}ADD\_FAILURE()"{},\ true)}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ EXPECT\_EQ(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::eq,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_EQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#define\ EXPECT\_NE(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::ne,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_NE("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ EXPECT\_LE(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::le,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_LE("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00106\ \textcolor{preprocessor}{\#define\ EXPECT\_LT(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::lt,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_LT("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#define\ EXPECT\_GE(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::ge,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_GE("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ EXPECT\_GT(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::gt,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_GT("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#define\ EXPECT\_TRUE(actual)\ \ gtest\_lite::EXPECT\_(true,\ actual,\ \ gtest\_lite::eq,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_TRUE("{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#define\ EXPECT\_FALSE(actual)\ gtest\_lite::EXPECT\_(false,\ actual,\ gtest\_lite::eq,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_FALSE("{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#define\ EXPECT\_FLOAT\_EQ(expected,\ actual)\ \ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::almostEQ,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_FLOAT\_EQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\#define\ EXPECT\_DOUBLE\_EQ(expected,\ actual)\ gtest\_lite::EXPECT\_(expected,\ actual,\ gtest\_lite::almostEQ,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_DOUBLE\_EQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\#define\ EXPECT\_STREQ(expected,\ actual)\ gtest\_lite::EXPECTSTR(expected,\ actual,\ gtest\_lite::eqstr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_STREQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#define\ EXPECT\_STRNE(expected,\ actual)\ gtest\_lite::EXPECTSTR(expected,\ actual,\ gtest\_lite::nestr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_STRNE("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ EXPECT\_STRCASEEQ(expected,\ actual)\ gtest\_lite::EXPECTSTR(expected,\ actual,\ gtest\_lite::eqstrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_STRCASEEQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#define\ EXPECT\_STRCASENE(expected,\ actual)\ gtest\_lite::EXPECTSTR(expected,\ actual,\ gtest\_lite::nestrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_STRCASENE("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{},\ "{}etalon"{}\ )}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ EXPECT\_THROW(statement,\ exception\_type)\ try\ \{\ gtest\_lite::test.tmp\ =\ false;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\ \ \ \ catch\ (exception\_type\ \&e)\ \{\ gtest\_lite::test.tmp\ =\ true;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\ \ \ \ catch\ (...)\ \{\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\ \ \ \ EXPECTTHROW(statement,\ "{}kivetelt\ dob."{},\ "{}nem\ dobott\ '"{}\#exception\_type"{}'\ kivetelt."{})}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ EXPECT\_ANY\_THROW(statement)\ try\ \{\ gtest\_lite::test.tmp\ =\ false;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00146\ \textcolor{preprocessor}{\ \ \ \ catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ true;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\ \ \ \ EXPECTTHROW(statement,\ "{}kivetelt\ dob."{},\ "{}nem\ dobott\ kivetelt."{})}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \textcolor{preprocessor}{\#define\ EXPECT\_NO\_THROW(statement)\ try\ \{\ gtest\_lite::test.tmp\ =\ true;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\ \ \ \ catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ false;\ \}\(\backslash\)}}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\ \ \ \ EXPECTTHROW(statement,\ "{}nem\ dob\ kivetelt."{},\ "{}kivetelt\ dobott."{})}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#define\ ASSERT\_NO\_THROW(statement)\ try\ \{\ gtest\_lite::test.tmp\ =\ true;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\ \ \ \ catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ false;\ \}\(\backslash\)}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\ \ \ \ ASSERTTHROW(statement,\ "{}nem\ dob\ kivetelt."{},\ "{}kivetelt\ dobott."{})}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ EXPECT\_THROW\_THROW(statement,\ exception\_type)\ try\ \{\ gtest\_lite::test.tmp\ =\ false;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00161\ \textcolor{preprocessor}{\ \ \ \ catch\ (exception\_type\ \&e)\ \{\ gtest\_lite::test.tmp\ =\ true;\ throw;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\ \ \ \ EXPECTTHROW(statement,\ "{}kivetelt\ dob."{},\ "{}nem\ dobott\ '"{}\#exception\_type"{}'\ kivetelt."{})}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \textcolor{preprocessor}{\#define\ EXPECT\_ENVEQ(expected,\ actual)\ gtest\_lite::EXPECTSTR(std::getenv(expected),\ actual,\ gtest\_lite::eqstr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_ENVEQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00168\ \textcolor{preprocessor}{\#define\ EXPECT\_ENVCASEEQ(expected,\ actual)\ gtest\_lite::EXPECTSTR(std::getenv(expected),\ actual,\ gtest\_lite::eqstrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_ENVCASEEQ("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ )}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#\ define\ EXPECT\_REGEXP(expected,\ actual,\ match,\ err)\ gtest\_lite::EXPECTREGEXP(expected,\ actual,\ match,\ err,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ "{}EXPECT\_REGEXP("{}\ \#expected\ "{},\ "{}\ \#actual\ "{},\ "{}\ \#match\ "{})"{}\ )}}
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00179\ \textcolor{preprocessor}{\#define\ ASSERT\_EQ(expected,\ actual)\ gtest\_lite::ASSERT\_(expected,\ actual,\ gtest\_lite::eq,\ "{}ASSER\_EQ"{})}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#define\ ASSERT\_NO\_THROW(statement)\ try\ \{\ gtest\_lite::test.tmp\ =\ true;\ statement;\ \}\ \(\backslash\)}}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\ \ \ \ catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ false;\ \}\(\backslash\)}}
+\DoxyCodeLine{00184\ \textcolor{preprocessor}{\ \ \ \ ASSERTTHROW(statement,\ "{}nem\ dob\ kivetelt."{},\ "{}kivetelt\ dobott."{})}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00193\ \textcolor{preprocessor}{\#define\ CREATE\_Has\_(X)\ \(\backslash\)}}
+\DoxyCodeLine{00194\ \textcolor{preprocessor}{template<typename\ T>\ struct\ \_Has\_\#\#X\ \{\ \ \(\backslash\)}}
+\DoxyCodeLine{00195\ \textcolor{preprocessor}{\ \ \ \ struct\ Fallback\ \{\ int\ X;\ \};\ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\ \ \ \ struct\ Derived\ :\ T,\ Fallback\ \{\};\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00197\ \textcolor{preprocessor}{\ \ \ \ template<typename\ C,\ C>\ struct\ ChT;\ \(\backslash\)}}
+\DoxyCodeLine{00198\ \textcolor{preprocessor}{\ \ \ \ template<typename\ D>\ static\ char\ (\&f(ChT<int\ Fallback::*,\ \&D::X>*))[1];\ \(\backslash\)}}
+\DoxyCodeLine{00199\ \textcolor{preprocessor}{\ \ \ \ template<typename\ D>\ static\ char\ (\&f(...))[2];\ \(\backslash\)}}
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\ \ \ \ static\ bool\ const\ member\ =\ sizeof(f<Derived>(0))\ ==\ 2;\ \(\backslash\)}}
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\};}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \textcolor{preprocessor}{\#define\ CREATE\_Has\_fn\_(X,\ S)\ \(\backslash\)}}
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{template<typename\ R,\ typename\ T>\ struct\ \_Has\_fn\_\#\#X\#\#\_\#\#S\ \{\ \ \(\backslash\)}}
+\DoxyCodeLine{00205\ \textcolor{preprocessor}{\ \ \ \ template<typename\ C,\ R\ (C::*f)()\ S>\ struct\ ChT;\ \(\backslash\)}}
+\DoxyCodeLine{00206\ \textcolor{preprocessor}{\ \ \ \ template<typename\ D>\ static\ char\ (\&f(ChT<D,\ \&D::X>*))[1];\ \(\backslash\)}}
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\ \ \ \ template<typename\ D>\ static\ char\ (\&f(...))[2];\ \(\backslash\)}}
+\DoxyCodeLine{00208\ \textcolor{preprocessor}{\ \ \ \ static\ bool\ const\ fn\ =\ sizeof(f<T>(0))\ ==\ 1;\ \(\backslash\)}}
+\DoxyCodeLine{00209\ \textcolor{preprocessor}{\};}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{gtest__lite_8h_aa57e54fc7cbf742de576263d90ee1660}{hasMember}}(...)\ \{\}}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00216\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ F,\ \textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00217\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct__Is__Types}{\_Is\_Types}}\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(D))[1];}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(...))[2];}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{const}\ convertable\ =\ \textcolor{keyword}{sizeof}(f<T>(F()))\ ==\ 1;}
+\DoxyCodeLine{00221\ \};}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00229\ \textcolor{preprocessor}{\#define\ EXPECTTHROW(statement,\ exp,\ act)\ gtest\_lite::test.expect(gtest\_lite::test.tmp,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#statement)\ \(\backslash\)}}
+\DoxyCodeLine{00230\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}**\ Az\ utasitas\ "{}\ <<\ (act)\ \(\backslash\)}}
+\DoxyCodeLine{00231\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}\(\backslash\)n**\ Azt\ vartuk,\ hogy\ "{}\ <<\ (exp)\ <<\ std::endl}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#define\ ASSERTTHROW(statement,\ exp,\ act)\ gtest\_lite::test.expect(gtest\_lite::test.tmp,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#statement)\ \(\backslash\)}}
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}**\ Az\ utasitas\ "{}\ <<\ (act)\ \(\backslash\)}}
+\DoxyCodeLine{00235\ \textcolor{preprocessor}{\ \ \ \ <<\ "{}\(\backslash\)n**\ Azt\ vartuk,\ hogy\ "{}\ <<\ (exp)\ <<\ std::endl;\ if\ (!gtest\_lite::test.status)\ \{\ gtest\_lite::test.end();\ break;\ \}}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \textcolor{preprocessor}{\#define\ ASSERT\_(expected,\ actual,\ fn,\ op)\ EXPECT\_(expected,\ actual,\ fn,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#op\ "{}("{}\ \#expected\ "{},\ "{}\ \#actual\ "{})"{}\ );\ \(\backslash\)}}
+\DoxyCodeLine{00238\ \textcolor{preprocessor}{\ \ \ \ if\ (!gtest\_lite::test.status)\ \{\ gtest\_lite::test.end();\ break;\ \}}}
+\DoxyCodeLine{00239\ }
+\DoxyCodeLine{00240\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00241\ \textcolor{preprocessor}{\#define\ GTINIT(is)\ \ \(\backslash\)}}
+\DoxyCodeLine{00242\ \textcolor{preprocessor}{\ \ \ \ int\ magic;\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\ \ \ \ is\ >>\ magic;}}
+\DoxyCodeLine{00244\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00245\ \textcolor{preprocessor}{\#define\ GTINIT(IS)}}
+\DoxyCodeLine{00246\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CPORTA}}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00248\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00249\ \textcolor{preprocessor}{\#define\ GTEND(os)\ \ \(\backslash\)}}
+\DoxyCodeLine{00250\ \textcolor{preprocessor}{\ \ \ \ os\ <<\ magic\ <<\ (gtest\_lite::test.fail()\ ?\ "{}\ NO"{}\ :\ "{}\ OK?"{})\ <<\ std::endl;}}
+\DoxyCodeLine{00251\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#define\ GTEND(os)}}
+\DoxyCodeLine{00253\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CPORTA}}
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00256\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespacegtest__lite}{gtest\_lite}}\ \{}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00261\ \textcolor{keyword}{struct\ }Test\ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a91d9c63794d2b9b49e0c48d897208560}{ablocks}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a1145ceb335a60a808b7b4d5d1624b2a5}{tmp}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00267\ \ \ \ \ std::string\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a8d495a42580e3ae337f9c4982136b700}{name}};\ \ \ }
+\DoxyCodeLine{00268\ \ \ \ \ std::fstream\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_af4784302d78bb004bcb20b7f75ec06c3}{null}};\ \ }
+\DoxyCodeLine{00269\ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}};\ \ \ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keyword}{static}\ Test\&\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_aaece9ac882e0b17b295cceb7e3ca10ce}{getTest}}()\ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ Test\ instance;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+\DoxyCodeLine{00274\ \textcolor{keyword}{private}:\ \ \ \ }
+\DoxyCodeLine{00275\ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test}{Test}}()\ :\doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}}(0),\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}}(0),\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}(false),\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_af4784302d78bb004bcb20b7f75ec06c3}{null}}(\textcolor{stringliteral}{"{}/dev/null"{}}),\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}(std::cout)\ \{\}}
+\DoxyCodeLine{00276\ \ \ \ \ Test(\textcolor{keyword}{const}\ Test\&);}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ Test\&);}
+\DoxyCodeLine{00278\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a2227b70fcc5dfb3c326bf117dd8f7e79}{begin}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *n)\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a8d495a42580e3ae337f9c4982136b700}{name}}\ =\ n;\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00282\ \textcolor{preprocessor}{\#ifdef\ MEMTRACE}}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a91d9c63794d2b9b49e0c48d897208560}{ablocks}}\ =\ memtrace::allocated\_blocks();}
+\DoxyCodeLine{00284\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/>\ "{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a8d495a42580e3ae337f9c4982136b700}{name}}\ <<\ std::endl;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}};}
+\DoxyCodeLine{00287\ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a86d41ffed05f53653fb27b918764a44e}{end}}(\textcolor{keywordtype}{bool}\ memchk\ =\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00290\ \textcolor{preprocessor}{\#ifdef\ MEMTRACE}}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (memchk\ \&\&\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a91d9c63794d2b9b49e0c48d897208560}{ablocks}}\ !=\ memtrace::allocated\_blocks())\ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}\ <<\ \textcolor{stringliteral}{"{}**\ Lehet,\ hogy\ nem\ szabaditott\ fel\ minden\ memoriat!\ **"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}\ <<\ (\doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}\ ?\ \textcolor{stringliteral}{"{}\ \ \ \ \ SIKERES"{}}\ :\ \textcolor{stringliteral}{"{}**\ HIBAS\ ****"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a8d495a42580e3ae337f9c4982136b700}{name}}\ <<\ \textcolor{stringliteral}{"{}\ <-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00297\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}})}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ (\doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}\ ?\ \textcolor{stringliteral}{"{}\ \ \ \ \ SIKERES"{}}\ :\ \textcolor{stringliteral}{"{}**\ HIBAS\ ****"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)t"{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a8d495a42580e3ae337f9c4982136b700}{name}}\ <<\ \textcolor{stringliteral}{"{}\ <-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00300\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CPORTA}}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}})}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}};}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_af4784302d78bb004bcb20b7f75ec06c3}{null}};}
+\DoxyCodeLine{00305\ \ \ \ \ \}}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ \textcolor{keywordtype}{bool}\ fail()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}};\ \}}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordtype}{bool}\ astatus()\ \{\ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}};\ \}}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00312\ \ \ \ \ std::ostream\&\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a2de71946be5b3dc7f03c99868785c1de}{expect}}(\textcolor{keywordtype}{bool}\ st,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keywordtype}{bool}\ pr\ =\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!st)\ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ ++\doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a59a9a7f0ef7867af604ce5678f7a2c13}{status}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!st\ ||\ pr)\ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ str(file);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ i\ =\ str.rfind(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)"{}});}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ std::string::npos)\ i\ =\ str.rfind(\textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ ==\ std::string::npos)\ i\ =\ 0;\ \textcolor{keywordflow}{else}\ i++;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n****\ "{}}\ <<\ \&file[i]\ <<\ \textcolor{stringliteral}{"{}("{}}\ <<\ line\ <<\ \textcolor{stringliteral}{"{}):\ "{}}\ <<\ expr\ <<\ \textcolor{stringliteral}{"{}\ ****"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_af4784302d78bb004bcb20b7f75ec06c3}{null}};}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+\DoxyCodeLine{00326\ }
+\DoxyCodeLine{00328\ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a5a879233c2aa110626668c06140f6e71}{\string~Test}}()\ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}}\ !=\ 0)\ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a499d76ef83538dcb5389f87bf6e8658c}{os}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n====\ TESZT\ VEGE\ ====\ HIBAS/OSSZES:\ "{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}}\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}}\ <<\ std::endl;}
+\DoxyCodeLine{00331\ \textcolor{preprocessor}{\#ifdef\ CPORTA}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}})}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n====\ TESZT\ VEGE\ ====\ HIBAS/OSSZES:\ "{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a4fb6ee7bd903717d970e3f0504cdeeab}{failed}}\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_a6da678d43b72b9e2bff1c99e1d3c48f5}{sum}}\ <<\ std::endl;}
+\DoxyCodeLine{00334\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CPORTA}}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+\DoxyCodeLine{00337\ \};}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00341\ \textcolor{keyword}{static}\ Test\&\ test\ =\ \doxymbox{\hyperlink{structgtest__lite_1_1Test_aaece9ac882e0b17b295cceb7e3ca10ce}{Test::getTest}}();}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00344\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ T2>}
+\DoxyCodeLine{00345\ std::ostream\&\ \doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{EXPECT\_}}(T1\ exp,\ T2\ act,\ \textcolor{keywordtype}{bool}\ (*pred)(T1,\ T1),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}elvart"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}aktual"{}})\ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \textcolor{keywordflow}{return}\ test.expect(pred(exp,\ act),\ file,\ line,\ expr)}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ std::boolalpha\ <<\ exp}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ std::boolalpha\ <<\ act\ <<\ std::endl;}
+\DoxyCodeLine{00350\ \}}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00353\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ T2>}
+\DoxyCodeLine{00354\ std::ostream\&\ \doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{EXPECT\_}}(T1*\ exp,\ T2*\ act,\ \textcolor{keywordtype}{bool}\ (*pred)(T1*,\ T1*),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}elvart"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}aktual"{}})\ \{}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{keywordflow}{return}\ test.expect(pred(exp,\ act),\ file,\ line,\ expr)}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ exp}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ act\ <<\ std::endl;}
+\DoxyCodeLine{00359\ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{00363\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00364\ std::ostream\&\ \doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{EXPECT\_}}(std::nullptr\_t\ exp,\ T*\ act,\ \textcolor{keywordtype}{bool}\ (*pred)(T*,\ T*),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}elvart"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}aktual"{}})\ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \textcolor{keywordflow}{return}\ test.\doxymbox{\hyperlink{structgtest__lite_1_1Test_a2de71946be5b3dc7f03c99868785c1de}{expect}}(pred(exp,\ act),\ file,\ line,\ expr)}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ exp}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ act\ <<\ std::endl;}
+\DoxyCodeLine{00369\ \}}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00372\ std::ostream\&\ \doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{EXPECT\_}}(T*\ exp,\ std::nullptr\_t\ act,\ \textcolor{keywordtype}{bool}\ (*pred)(T*,\ T*),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}elvart"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}aktual"{}})\ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \textcolor{keywordflow}{return}\ test.expect(pred(exp,\ act),\ file,\ line,\ expr)}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ exp}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (\textcolor{keywordtype}{void}*)\ act\ <<\ std::endl;}
+\DoxyCodeLine{00377\ \}}
+\DoxyCodeLine{00378\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00379\ }
+\DoxyCodeLine{00382\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00383\ std::ostream\&\ \doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{EXPECTSTR}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *exp,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *act,\ \textcolor{keywordtype}{bool}\ (*pred)(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*),\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}elvart"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}aktual"{}})\ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \textcolor{keywordflow}{return}\ test.expect(pred(exp,\ act),\ file,\ line,\ expr)}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (exp\ ==\ NULL\ ?\ \textcolor{stringliteral}{"{}NULL\ pointer"{}}\ :\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})\ +\ exp\ +\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}))}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (act\ ==\ NULL\ ?\ \textcolor{stringliteral}{"{}NULL\ pointer"{}}\ :\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})\ +\ act\ +\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}}))\ <<\ std::endl;}
+\DoxyCodeLine{00388\ \}}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00390\ \textcolor{preprocessor}{\#if\ \_\_cplusplus\ >=\ 201103L}}
+\DoxyCodeLine{00392\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ E,\ \textcolor{keyword}{typename}\ S>}
+\DoxyCodeLine{00393\ \textcolor{keywordtype}{int}\ count\_regexp(E\ exp,\ S\ str)\ \{}
+\DoxyCodeLine{00394\ \ \ \ \ std::regex\ rexp(exp);}
+\DoxyCodeLine{00395\ \ \ \ \ \textcolor{keyword}{auto}\ w\_beg\ =\ std::sregex\_iterator(str.begin(),\ str.end(),\ rexp);}
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keyword}{auto}\ w\_end\ =\ std::sregex\_iterator();}
+\DoxyCodeLine{00397\ \ \ \ \ \textcolor{keywordflow}{return}\ std::distance(w\_beg,\ w\_end);}
+\DoxyCodeLine{00398\ \}}
+\DoxyCodeLine{00399\ }
+\DoxyCodeLine{00400\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ E,\ \textcolor{keyword}{typename}\ S>}
+\DoxyCodeLine{00401\ std::ostream\&\ EXPECTREGEXP(E\ exp,\ S\ str,\ \textcolor{keywordtype}{int}\ match,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *err,\ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line,}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *expr,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *lhs\ =\ \textcolor{stringliteral}{"{}regexp"{}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *rhs\ =\ \textcolor{stringliteral}{"{}string"{}},}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *m\ =\ \textcolor{stringliteral}{"{}elvart/illeszkedik"{}})\ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \textcolor{keywordtype}{int}\ cnt\ =\ count\_regexp(exp,\ str);}
+\DoxyCodeLine{00405\ \ \ \ \ \textcolor{keywordflow}{if}\ (match\ <\ 0)\ match\ =\ cnt;}
+\DoxyCodeLine{00406\ \ \ \ \ \textcolor{keywordflow}{return}\ test.expect(cnt\ ==\ match,\ file,\ line,\ expr)}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}**\ "{}}\ <<\ lhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})\ +\ exp\ +\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ rhs\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ (err\ ==\ NULL\ ?\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})\ +\ str\ +\ std::string(\textcolor{stringliteral}{"{}\(\backslash\)"{}"{}})\ :\ err)}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ "{}}\ <<\ m\ <<\ \textcolor{stringliteral}{"{}:\ "{}}\ <<\ match\ <<\ \textcolor{stringliteral}{"{}/"{}}\ <<\ cnt\ <<\ std::endl;}
+\DoxyCodeLine{00410\ \}}
+\DoxyCodeLine{00411\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00415\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00416\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{eq}}(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ ==\ b;\ \}}
+\DoxyCodeLine{00417\ }
+\DoxyCodeLine{00418\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00419\ \textcolor{keywordtype}{bool}\ eqstr(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b)\ \{}
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ !=\ NULL\ \&\&\ b\ !=\ NULL)}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strcmp(a,\ b)\ ==\ 0;}
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00423\ \}}
+\DoxyCodeLine{00424\ }
+\DoxyCodeLine{00425\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00426\ \textcolor{keywordtype}{bool}\ eqstrcase(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b)\ \{}
+\DoxyCodeLine{00427\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ !=\ NULL\ \&\&\ b\ !=\ NULL)\ \{}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (toupper(*a)\ ==\ toupper(*b)\ \&\&\ *a\ !=\ \textcolor{charliteral}{'\(\backslash\)0'})\ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ a++;}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ b++;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *a\ ==\ *b;}
+\DoxyCodeLine{00433\ \ \ \ \ \}}
+\DoxyCodeLine{00434\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00435\ }
+\DoxyCodeLine{00436\ \}}
+\DoxyCodeLine{00437\ }
+\DoxyCodeLine{00438\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00439\ \textcolor{keywordtype}{bool}\ ne(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ !=\ b;\ \}}
+\DoxyCodeLine{00440\ }
+\DoxyCodeLine{00441\ \textcolor{keyword}{inline}}
+\DoxyCodeLine{00442\ \textcolor{keywordtype}{bool}\ nestr(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *a,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *b)\ \{}
+\DoxyCodeLine{00443\ \ \ \ \ \textcolor{keywordflow}{if}\ (a\ !=\ NULL\ \&\&\ b\ !=\ NULL)}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strcmp(a,\ b)\ !=\ 0;}
+\DoxyCodeLine{00445\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00446\ \}}
+\DoxyCodeLine{00447\ }
+\DoxyCodeLine{00448\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00449\ \textcolor{keywordtype}{bool}\ le(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ <=\ b;\ \}}
+\DoxyCodeLine{00450\ }
+\DoxyCodeLine{00451\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00452\ \textcolor{keywordtype}{bool}\ lt(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ <\ b;\ \}}
+\DoxyCodeLine{00453\ }
+\DoxyCodeLine{00454\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00455\ \textcolor{keywordtype}{bool}\ ge(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ >=\ b;\ \}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00458\ \textcolor{keywordtype}{bool}\ gt(T\ a,\ T\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ >\ b;\ \}}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00464\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00465\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}{almostEQ}}(T\ a,\ T\ \ b)\ \{}
+\DoxyCodeLine{00466\ \ \ \ \ \textcolor{comment}{//\ eps:\ ha\ a\ relatív,\ vagy\ abszolút\ hiba\ ettől\ kisebb,\ akkor\ elfogadjuk}}
+\DoxyCodeLine{00467\ \ \ \ \ T\ eps\ =\ 10\ *\ std::numeric\_limits<T>::epsilon();\ \textcolor{comment}{//\ 10-\/szer\ a\ legkisebb\ érték}}
+\DoxyCodeLine{00468\ \ \ \ \ T\ diff\ =\ fabs(a\ -\/\ b);}
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keywordflow}{if}\ (diff\ <\ eps)}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00471\ \ \ \ \ T\ aa\ =\ fabs(a);}
+\DoxyCodeLine{00472\ \ \ \ \ T\ ba\ =\ fabs(b);}
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{keywordflow}{if}\ (aa\ <\ ba)\ \{}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ aa\ =\ ba;}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ ba\ =\ fabs(a);}
+\DoxyCodeLine{00476\ \ \ \ \ \}}
+\DoxyCodeLine{00477\ \ \ \ \ \textcolor{keywordflow}{return}\ diff\ <\ aa\ *\ eps;}
+\DoxyCodeLine{00478\ \}}
+\DoxyCodeLine{00479\ }
+\DoxyCodeLine{00482\ \textcolor{keyword}{class\ }ostreamRedir\ \{}
+\DoxyCodeLine{00483\ \ \ \ \ std::ostream\&\ src;}
+\DoxyCodeLine{00484\ \ \ \ \ std::streambuf\ *\textcolor{keyword}{const}\ save;}
+\DoxyCodeLine{00485\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00486\ \ \ \ \ ostreamRedir(std::ostream\&\ src,\ std::ostream\&\ dst)}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ :\ src(src),\ save(src.rdbuf(dst.rdbuf()))\ \{\}}
+\DoxyCodeLine{00488\ \ \ \ \ \string~ostreamRedir()\ \{\ src.rdbuf(save);\ \}}
+\DoxyCodeLine{00489\ \};}
+\DoxyCodeLine{00490\ }
+\DoxyCodeLine{00491\ \}\ \textcolor{comment}{//\ namespace\ gtest\_lite}}
+\DoxyCodeLine{00492\ }
+\DoxyCodeLine{00493\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ GTEST\_LITE\_H}}
+
+\end{DoxyCode}

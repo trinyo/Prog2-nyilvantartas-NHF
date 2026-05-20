@@ -1,0 +1,119 @@
+#direction: right
+#spacing: 40
+#padding: 15
+#fontSize: 10
+#title: Végleges Egyetemi Adatkezelő (C++ vectorral)
+
+[<abstract>Szemely|
+  - nev: string
+  - kod: string
+  - email: string
+  - csoportok: vector<string>
+|
+  + Szemely(n, k, e)
+  + virtual ~Szemely()
+  + virtual void kiir() const = 0
+  + addCsoport(string cs)
+  + getKod(): string
+  + getCsoportSzam(): size_t
+  + getCsoport(size_t i): string
+  + setNev(string n)
+  + setEmail(string e)
+  + setKod(string k)
+]
+
+[Szemely] <:- [Hallgato]
+[Szemely] <:- [Oktato]
+
+[Hallgato|
+  - szak: string
+  - felev: int
+  - hianyzas: int
+  - zhPontok: vector<double>
+  - nzh: double
+  - vizsga: double
+  - osztondij: bool
+  - statusz: string
+  - extra_pont: int
+  - megjegyzes: string
+|
+  + Hallgato(n, k, e, szak, felev, zh)
+  + Hallgato(szak, felev, zh)
+  + void kiir() const
+  + kiir(ostream& out) const
+  + addZH(double p)
+  + setOsztondij(bool o)
+  + getNzh() const: double
+  + setNzh(double n)
+  + getOsztondij() const: bool
+  + getStatusz() const: string
+  + setEmail(string e)
+  + setFelev(int f)
+  + setStatusz(string s)
+  + setVizsga(double v)
+  + setHianyzas(int h)
+]
+
+[Oktato|
+  - titulus: string
+  - tanszek: string
+  - iroda: string
+  - targy: string
+  - konzultacio: string
+  - maxCsop: int
+|
+  + Oktato(n, k, e, tit, tszk, iro, tg, konz, max)
+  + Oktato(tit, tszk, iro, tg, konz, max)
+  + virtual ~Oktato()
+  + void kiir() const
+  + kiir(ostream& out) const
+  + getTanszek() const: string
+  + setEmail(string e)
+  + setTanszek(string ts)
+  + setIroda(string i)
+  + setTargy(string t)
+]
+
+[Parser|
+  - adatok: vector<Szemely*>
+|
+  + Parser() = default
+  + ~Parser()
+  + beolvas(string file)
+  + mentes(string file)
+  + hozzaad(Szemely* uj)
+  + keresKodAlapjan(string k): Szemely*
+  + torol(string k): bool
+  + getMeret() const: int
+  + listazMindenkit()
+  + listazHallgatok()
+  + listazOktatok()
+  + listazPZH_Kotelezettek()
+  + listazOsztondijasok()
+  + listazCsoportAlapjan(string cs)
+  + listazTanszekAlapjan(string tszk)
+  + listazKivaloStatuszuak()
+|
+  - sorFeldolgoz(string sor)
+]
+
+[Parser] o-> [Szemely]
+
+[Menu|
+  - parser: Parser&
+|
+  + Menu(Parser& p)
+  + start()
+  - displayMainMenu()
+  - displayListMenu()
+  - displayNewDataMenu()
+  - displayDataManagementMenu()
+  - listMenuLoop()
+  - newDataMenuLoop()
+  - dataManagementMenuLoop()
+  - fileMenuLoop()
+  - clearScreen()
+  - waitForEnter()
+]
+
+[Menu] -> [Parser]

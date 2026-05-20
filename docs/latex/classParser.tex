@@ -1,0 +1,168 @@
+\doxysection{Parser Class Reference}
+\hypertarget{classParser}{}\label{classParser}\index{Parser@{Parser}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classParser_a12234f6cd36b61af4b50c94a179422c1}\label{classParser_a12234f6cd36b61af4b50c94a179422c1} 
+{\bfseries Parser} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor -\/ kezdeti memoria foglalasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a3e658b5917a93a3ef648050d060e3a93}\label{classParser_a3e658b5917a93a3ef648050d060e3a93} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Destruktor -\/ memoria felszabaditasa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d}{beolvas}} (std::\+string file)
+\begin{DoxyCompactList}\small\item\em Fajl beolvasasa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b}{mentes}} (std::\+string file)
+\begin{DoxyCompactList}\small\item\em Adatok mentese fajlba. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a3296f568cbfb0e4fcebfe73dd48d507d}{hozzaad}} (\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*}uj)
+\begin{DoxyCompactList}\small\item\em Uj szemely hozzaadasa a listahoz. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classParser_ae6f345cffd609d92b52a827ca447fb19}{keres\+Kod\+Alapjan}} (std::\+string k)
+\begin{DoxyCompactList}\small\item\em Kereses kod alapjan. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classParser_a85e6b84a76fd2b319c845dc40db20597}{torol}} (std::\+string k)
+\begin{DoxyCompactList}\small\item\em Torles kod alapjan. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_afbd429549a1ab64e03af6ab315a24057}\label{classParser_afbd429549a1ab64e03af6ab315a24057} 
+void {\bfseries listaz\+Mindenkit} ()
+\begin{DoxyCompactList}\small\item\em Osszes rekord listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_ae49a15e6a5167a258ab144b98d0b2194}\label{classParser_ae49a15e6a5167a258ab144b98d0b2194} 
+void {\bfseries listaz\+Hallgatok} ()
+\begin{DoxyCompactList}\small\item\em Osszes hallgato listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a69813987ce7da21bbebbd155be951501}\label{classParser_a69813987ce7da21bbebbd155be951501} 
+void {\bfseries listaz\+Oktatok} ()
+\begin{DoxyCompactList}\small\item\em Osszes oktato listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a075d6773c69a25da121ba4433ce7ebe8}\label{classParser_a075d6773c69a25da121ba4433ce7ebe8} 
+void {\bfseries listaz\+PZH\+\_\+\+Kotelezettek} ()
+\begin{DoxyCompactList}\small\item\em PZH-\/ra kotelezett hallgatok listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_aec721027112693cd77c13cf5e5ca3234}\label{classParser_aec721027112693cd77c13cf5e5ca3234} 
+void {\bfseries listaz\+Osztondijasok} ()
+\begin{DoxyCompactList}\small\item\em Osztondijas hallgatok listazasa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a35ba75f040ff58fac2467e2c08ce905b}{listaz\+Csoport\+Alapjan}} (std::\+string cs)
+\begin{DoxyCompactList}\small\item\em Csoport alapjan szurt hallgatok listazasa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a9c059670b89d3a08a55c9c71769fef4f}{listaz\+Tanszek\+Alapjan}} (std::\+string tszk)
+\begin{DoxyCompactList}\small\item\em Tanszek alapjan szurt oktatok listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a81306489bbe8c73fd80f19fae86dd096}\label{classParser_a81306489bbe8c73fd80f19fae86dd096} 
+void {\bfseries listaz\+Kivalo\+Statuszuak} ()
+\begin{DoxyCompactList}\small\item\em Kivalo statuszu hallgatok listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a875a62d0c79e360685bf119d8f3f946d}\label{classParser_a875a62d0c79e360685bf119d8f3f946d} 
+int {\bfseries get\+Meret} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classParser_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d}\index{Parser@{Parser}!beolvas@{beolvas}}
+\index{beolvas@{beolvas}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{beolvas()}{beolvas()}}
+{\footnotesize\ttfamily \label{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d} 
+void Parser::\+beolvas (\begin{DoxyParamCaption}\item[{std::\+string}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Fajl beolvasasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Fajl eleresi utja \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a3296f568cbfb0e4fcebfe73dd48d507d}\index{Parser@{Parser}!hozzaad@{hozzaad}}
+\index{hozzaad@{hozzaad}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{hozzaad()}{hozzaad()}}
+{\footnotesize\ttfamily \label{classParser_a3296f568cbfb0e4fcebfe73dd48d507d} 
+void Parser::\+hozzaad (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*}}]{uj}{}\end{DoxyParamCaption})}
+
+
+
+Uj szemely hozzaadasa a listahoz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uj} & Uj szemely pointer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_ae6f345cffd609d92b52a827ca447fb19}\index{Parser@{Parser}!keresKodAlapjan@{keresKodAlapjan}}
+\index{keresKodAlapjan@{keresKodAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{keresKodAlapjan()}{keresKodAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_ae6f345cffd609d92b52a827ca447fb19} 
+\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*} Parser::\+keres\+Kod\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Kereses kod alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Keresendo kod \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Talalt szemely pointer vagy 0 
+\end{DoxyReturn}
+\Hypertarget{classParser_a35ba75f040ff58fac2467e2c08ce905b}\index{Parser@{Parser}!listazCsoportAlapjan@{listazCsoportAlapjan}}
+\index{listazCsoportAlapjan@{listazCsoportAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{listazCsoportAlapjan()}{listazCsoportAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_a35ba75f040ff58fac2467e2c08ce905b} 
+void Parser::\+listaz\+Csoport\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{cs}{}\end{DoxyParamCaption})}
+
+
+
+Csoport alapjan szurt hallgatok listazasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & Csoport szama \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a9c059670b89d3a08a55c9c71769fef4f}\index{Parser@{Parser}!listazTanszekAlapjan@{listazTanszekAlapjan}}
+\index{listazTanszekAlapjan@{listazTanszekAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{listazTanszekAlapjan()}{listazTanszekAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_a9c059670b89d3a08a55c9c71769fef4f} 
+void Parser::\+listaz\+Tanszek\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{tszk}{}\end{DoxyParamCaption})}
+
+
+
+Tanszek alapjan szurt oktatok listazasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tszk} & Tanszek neve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b}\index{Parser@{Parser}!mentes@{mentes}}
+\index{mentes@{mentes}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{mentes()}{mentes()}}
+{\footnotesize\ttfamily \label{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b} 
+void Parser::\+mentes (\begin{DoxyParamCaption}\item[{std::\+string}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Adatok mentese fajlba. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Fajl eleresi utja \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a85e6b84a76fd2b319c845dc40db20597}\index{Parser@{Parser}!torol@{torol}}
+\index{torol@{torol}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{torol()}{torol()}}
+{\footnotesize\ttfamily \label{classParser_a85e6b84a76fd2b319c845dc40db20597} 
+bool Parser::\+torol (\begin{DoxyParamCaption}\item[{std::\+string}]{k}{}\end{DoxyParamCaption})}
+
+
+
+Torles kod alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Torlendo kod \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true ha sikerult, false ha nem talalt 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Parser.\+h\item 
+src/\+\doxymbox{\hyperlink{Parser_8cpp}{Parser.\+cpp}}\end{DoxyCompactItemize}

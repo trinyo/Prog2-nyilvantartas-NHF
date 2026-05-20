@@ -1,0 +1,45 @@
+\doxysection{Hallgato.\+h}
+\hypertarget{Hallgato_8h_source}{}\label{Hallgato_8h_source}\index{include/Hallgato.h@{include/Hallgato.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ HALLGATO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ HALLGATO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Szemely.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classHallgato_a055894b401ae02df9ced41d9720543b0}{Hallgato}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{classSzemely_aabc575221edae2931a6e6282980da1f8}{Szemely}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ std::string\ szak;\ }
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{int}\ felev;\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{keywordtype}{int}\ hianyzas;\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{double}\ *zhPontok;\ }
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{int}\ zhSzam;\ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{double}\ nzh;\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{double}\ vizsga;\ }
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{bool}\ osztondij;\ }
+\DoxyCodeLine{00023\ \ \ std::string\ statusz;\ }
+\DoxyCodeLine{00024\ \ \ \textcolor{keywordtype}{int}\ extra\_pont;\ }
+\DoxyCodeLine{00025\ \ \ std::string\ megjegyzes;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \doxymbox{\hyperlink{classHallgato_a055894b401ae02df9ced41d9720543b0}{Hallgato}}(std::string\ n,\ std::string\ k,\ std::string\ e,\ std::string\ sz,\ \textcolor{keywordtype}{int}\ felev,\ \textcolor{keywordtype}{int}\ zhSzam);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \doxymbox{\hyperlink{classHallgato_a055894b401ae02df9ced41d9720543b0}{Hallgato}}(std::string\ szak,\ \textcolor{keywordtype}{int}\ felev,\ \textcolor{keywordtype}{int}\ zhSzam);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{classHallgato_ae489f8c96675429fc5b1dcd23e93c9ad}{\string~Hallgato}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classHallgato_a57060ae30c91a600f6e9704305a24043}{kiir}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classHallgato_a9375611a7342775e4bf0835cbe9c688c}{addZH}}(\textcolor{keywordtype}{double}\ p);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classHallgato_ad50308c6c2283ff5ec36779417fe65ea}{setOsztondij}}(\textcolor{keywordtype}{bool}\ o);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{classHallgato_a34cbe1bb08ca981c320aeb49fe5b2da3}{getNzh}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classHallgato_a6c9863dd1cd4125ad3d4133bf4265a0c}{getOsztondij}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ std::string\ \doxymbox{\hyperlink{classHallgato_a75210bc5a71785c1b7e869d94db33bf6}{getStatusz}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \};}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

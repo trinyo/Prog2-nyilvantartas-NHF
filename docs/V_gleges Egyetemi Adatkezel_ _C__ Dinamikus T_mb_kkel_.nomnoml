@@ -1,0 +1,101 @@
+#direction: right
+#spacing: 40
+#padding: 15
+#fontSize: 10
+#title: Végleges Egyetemi Adatkezelő (C++ Dinamikus Tömbökkel)
+[<abstract>Szemely|
+  - nev: string
+  - kod: string
+  - email: string
+  - csoportok: string*
+  - csopSzam: size_t
+|
+  + Szemely(n, k, e)
+  + virtual ~Szemely()
+  + virtual void kiir() const = 0
+  + addCsoport(cs: string)
+  + getKod(): string
+  + getCsoportSzam(): size_t
+  + getCsoport(i: size_t): string
+]
+[Szemely] <:- [Hallgato]
+[Szemely] <:- [Oktato]
+[Hallgato|
+  - szak: string
+  - felev: int
+  - hianyzas: int
+  - zhPontok: double*
+  - zhSzam: int
+  - nzh: double
+  - vizsga: double
+  - osztondij: bool
+  - statusz: string
+  - extra_pont: int
+  - megjegyzes: string
+|
+  + Hallgato(n, k, e, szak, felev, zhSzam)
+  + Hallgato(szak, felev, zhSzam)
+  + virtual ~Hallgato()
+  + virtual void kiir() const
+  + addZH(p: double)
+  + setOsztondij(o: bool)
+  + getNzh(): double const
+  + getOsztondij(): bool const
+  + getStatusz(): string const
+]
+[Oktato|
+  - titulus: string
+  - tanszek: string
+  - iroda: string
+  - targy: string
+  - konzultacio: string
+  - maxCsop: int
+|
+  + Oktato(n, k, e, tit, tszk, iro, tg, konz, max)
+  + Oktato(tit, tszk, iro, tg, konz, max)
+  + virtual ~Oktato()
+  + virtual void kiir() const
+  + getTanszek(): string const
+]
+[Parser|
+  - adatok: Szemely**
+  - kapacitas: int
+  - meret: int
+|
+  + Parser()
+  + ~Parser()
+  + beolvas(file: string)
+  + mentes(file: string)
+  + hozzaad(uj: Szemely*)
+  + keresKodAlapjan(k: string): Szemely*
+  + torol(k: string): bool
+  + getMeret(): int
+  + listazMindenkit()
+  + listazHallgatok()
+  + listazOktatok()
+  + listazPZH_Kotelezettek()
+  + listazOsztondijasok()
+  + listazCsoportAlapjan(cs: string)
+  + listazTanszekAlapjan(tszk: string)
+  + listazKivaloStatuszuak()
+  - atmeretez()
+  - sorFeldolgoz(sor: string)
+]
+[Parser] o-> [Szemely]
+[Menu|
+  - parser: Parser&
+|
+  + Menu(p: Parser&)
+  + start()
+  - displayMainMenu()
+  - displayListMenu()
+  - displayNewDataMenu()
+  - displayDataManagementMenu()
+  - listMenuLoop()
+  - newDataMenuLoop()
+  - dataManagementMenuLoop()
+  - fileMenuLoop()
+  - clearScreen()
+  - waitForEnter()
+]
+[Menu] -> [Parser]

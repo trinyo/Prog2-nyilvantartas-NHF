@@ -1,0 +1,158 @@
+\doxysection{Parser Class Reference}
+\hypertarget{classParser}{}\label{classParser}\index{Parser@{Parser}}
+
+
+Adatbazis kezelo osztaly.  
+
+
+
+
+{\ttfamily \+\#include $<$Parser.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classParser_a12234f6cd36b61af4b50c94a179422c1}\label{classParser_a12234f6cd36b61af4b50c94a179422c1} 
+{\bfseries Parser} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a3e658b5917a93a3ef648050d060e3a93}\label{classParser_a3e658b5917a93a3ef648050d060e3a93} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Parser} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d}{beolvas}} (std::\+string file)
+\begin{DoxyCompactList}\small\item\em Adatok beolvasasa fajlbol. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b}{mentes}} (std::\+string file)
+\begin{DoxyCompactList}\small\item\em Adatok mentese fajlba. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a3296f568cbfb0e4fcebfe73dd48d507d}{hozzaad}} (\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*}uj)
+\begin{DoxyCompactList}\small\item\em Uj szemely hozzaadasa. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classParser_ae6f345cffd609d92b52a827ca447fb19}{keres\+Kod\+Alapjan}} (std::\+string k)
+\begin{DoxyCompactList}\small\item\em \doxylink{classSzemely}{Szemely} keresese kod alapjan. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a3a0e9e2ee8afb112fa37f5945220c2ab}\label{classParser_a3a0e9e2ee8afb112fa37f5945220c2ab} 
+void {\bfseries listazas\+Mindenkit} ()
+\begin{DoxyCompactList}\small\item\em Osszes szemely listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_ae49a15e6a5167a258ab144b98d0b2194}\label{classParser_ae49a15e6a5167a258ab144b98d0b2194} 
+void {\bfseries listaz\+Hallgatok} ()
+\begin{DoxyCompactList}\small\item\em Csak hallgatok listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a69813987ce7da21bbebbd155be951501}\label{classParser_a69813987ce7da21bbebbd155be951501} 
+void {\bfseries listaz\+Oktatok} ()
+\begin{DoxyCompactList}\small\item\em Csak oktatok listazasa. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a9300c61857dc85a3f26df9271cf60747}\label{classParser_a9300c61857dc85a3f26df9271cf60747} 
+void {\bfseries lista\+PZH\+\_\+\+Kotelezettek} ()
+\begin{DoxyCompactList}\small\item\em PZH-\/ra kotelezett hallgatok listaja. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_ace3dbb3361db10b0096b032f8e286545}\label{classParser_ace3dbb3361db10b0096b032f8e286545} 
+void {\bfseries lista\+Osztondijasok} ()
+\begin{DoxyCompactList}\small\item\em Osztondijas hallgatok listaja. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a35ba75f040ff58fac2467e2c08ce905b}{listaz\+Csoport\+Alapjan}} (std::\+string cs)
+\begin{DoxyCompactList}\small\item\em Hallgatok listazasa csoport alapjan. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classParser_a472245e3ba248dbd182819e75bd34c95}{listazas\+Tanszek\+Alapjan}} (std::\+string tszk)
+\begin{DoxyCompactList}\small\item\em Szemelyek listazasa tanszek alapjan. \end{DoxyCompactList}\item 
+\Hypertarget{classParser_a81306489bbe8c73fd80f19fae86dd096}\label{classParser_a81306489bbe8c73fd80f19fae86dd096} 
+void {\bfseries listaz\+Kivalo\+Statuszuak} ()
+\begin{DoxyCompactList}\small\item\em Kivalo statuszu hallgatok listaja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Adatbazis kezelo osztaly. 
+
+Felelos a szemelyi adatok beolvasasaert, tarolasaert, kezeleseert. Dinamikusan kezeli a memoriat, szuk eseten bovit a kapacitason. 
+
+\label{doc-func-members}
+\Hypertarget{classParser_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d}\index{Parser@{Parser}!beolvas@{beolvas}}
+\index{beolvas@{beolvas}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{beolvas()}{beolvas()}}
+{\footnotesize\ttfamily \label{classParser_ab15c09cc03f7b82cc9ffa403bf0a550d} 
+void Parser::\+beolvas (\begin{DoxyParamCaption}\item[{std::\+string}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Adatok beolvasasa fajlbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Fajl eleres \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a3296f568cbfb0e4fcebfe73dd48d507d}\index{Parser@{Parser}!hozzaad@{hozzaad}}
+\index{hozzaad@{hozzaad}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{hozzaad()}{hozzaad()}}
+{\footnotesize\ttfamily \label{classParser_a3296f568cbfb0e4fcebfe73dd48d507d} 
+void Parser::\+hozzaad (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*}}]{uj}{}\end{DoxyParamCaption})}
+
+
+
+Uj szemely hozzaadasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uj} & Uj szemely pointer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_ae6f345cffd609d92b52a827ca447fb19}\index{Parser@{Parser}!keresKodAlapjan@{keresKodAlapjan}}
+\index{keresKodAlapjan@{keresKodAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{keresKodAlapjan()}{keresKodAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_ae6f345cffd609d92b52a827ca447fb19} 
+\doxymbox{\hyperlink{classSzemely}{Szemely}} \texorpdfstring{$\ast$}{*} Parser::\+keres\+Kod\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{k}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{classSzemely}{Szemely} keresese kod alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & Keresendo kod \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sikeres keresules eseten a szemely pointer, egyebkent null 
+\end{DoxyReturn}
+\Hypertarget{classParser_a472245e3ba248dbd182819e75bd34c95}\index{Parser@{Parser}!listazasTanszekAlapjan@{listazasTanszekAlapjan}}
+\index{listazasTanszekAlapjan@{listazasTanszekAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{listazasTanszekAlapjan()}{listazasTanszekAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_a472245e3ba248dbd182819e75bd34c95} 
+void Parser::\+listazas\+Tanszek\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{tszk}{}\end{DoxyParamCaption})}
+
+
+
+Szemelyek listazasa tanszek alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tszk} & Tanszek neve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a35ba75f040ff58fac2467e2c08ce905b}\index{Parser@{Parser}!listazCsoportAlapjan@{listazCsoportAlapjan}}
+\index{listazCsoportAlapjan@{listazCsoportAlapjan}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{listazCsoportAlapjan()}{listazCsoportAlapjan()}}
+{\footnotesize\ttfamily \label{classParser_a35ba75f040ff58fac2467e2c08ce905b} 
+void Parser::\+listaz\+Csoport\+Alapjan (\begin{DoxyParamCaption}\item[{std::\+string}]{cs}{}\end{DoxyParamCaption})}
+
+
+
+Hallgatok listazasa csoport alapjan. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & Csoport neve \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b}\index{Parser@{Parser}!mentes@{mentes}}
+\index{mentes@{mentes}!Parser@{Parser}}
+\doxysubsubsection{\texorpdfstring{mentes()}{mentes()}}
+{\footnotesize\ttfamily \label{classParser_a9b51b9f93c86e36be3cb33d7ec9dde6b} 
+void Parser::\+mentes (\begin{DoxyParamCaption}\item[{std::\+string}]{file}{}\end{DoxyParamCaption})}
+
+
+
+Adatok mentese fajlba. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Fajl eleres \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Parser.\+h\end{DoxyCompactItemize}

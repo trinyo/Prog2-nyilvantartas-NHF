@@ -1,0 +1,82 @@
+\doxysection{gtest\+\_\+lite Namespace Reference}
+\hypertarget{namespacegtest__lite}{}\label{namespacegtest__lite}\index{gtest\_lite@{gtest\_lite}}
+
+
+\doxylink{namespacegtest__lite}{gtest\+\_\+lite}:\+ a keretrendszer függvényinek és objektumainak névtere  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structgtest__lite_1_1Test}{Test}}
+\item 
+class \doxymbox{\hyperlink{classgtest__lite_1_1ostreamRedir}{ostream\+Redir}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}\label{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27} 
+{\footnotesize template$<$typename T1, typename T2$>$ }\\std::\+ostream \& {\bfseries EXPECT\+\_\+} (T1 exp, T2 act, bool(\texorpdfstring{$\ast$}{*}pred)(T1, T1), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\begin{DoxyCompactList}\small\item\em általános sablon a várt értékhez. \end{DoxyCompactList}\item 
+\Hypertarget{namespacegtest__lite_a4084b4c8a7b57ae066f092fb580b1d99}\label{namespacegtest__lite_a4084b4c8a7b57ae066f092fb580b1d99} 
+{\footnotesize template$<$typename T1, typename T2$>$ }\\std::\+ostream \& {\bfseries EXPECT\+\_\+} (T1 \texorpdfstring{$\ast$}{*}exp, T2 \texorpdfstring{$\ast$}{*}act, bool(\texorpdfstring{$\ast$}{*}pred)(T1 \texorpdfstring{$\ast$}{*}, T1 \texorpdfstring{$\ast$}{*}), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\begin{DoxyCompactList}\small\item\em pointerre specializált sablon a várt értékhez. \end{DoxyCompactList}\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{EXPECTSTR}} (const char \texorpdfstring{$\ast$}{*}exp, const char \texorpdfstring{$\ast$}{*}act, bool(\texorpdfstring{$\ast$}{*}pred)(const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{eq}} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a34055f353dabbe4ed9063f1d36af6022}\label{namespacegtest__lite_a34055f353dabbe4ed9063f1d36af6022} 
+bool {\bfseries eqstr} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a50e47b21dec025ed15ef3767e556d038}\label{namespacegtest__lite_a50e47b21dec025ed15ef3767e556d038} 
+bool {\bfseries eqstrcase} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a9a1485affebbed604f7cac69f70072dc}\label{namespacegtest__lite_a9a1485affebbed604f7cac69f70072dc} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries ne} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a0a34b1bb0d55bc0c6a3e878ec2bcd49f}\label{namespacegtest__lite_a0a34b1bb0d55bc0c6a3e878ec2bcd49f} 
+bool {\bfseries nestr} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a92068d494867b61abeef5942eefac3a3}\label{namespacegtest__lite_a92068d494867b61abeef5942eefac3a3} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries le} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_acfefb55c5d3713c79b659bbd18d9423c}\label{namespacegtest__lite_acfefb55c5d3713c79b659bbd18d9423c} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries lt} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_ae8c2517b99b688c6136d8c7c18551da5}\label{namespacegtest__lite_ae8c2517b99b688c6136d8c7c18551da5} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries ge} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a2075d101da98f80f569b0737c5185718}\label{namespacegtest__lite_a2075d101da98f80f569b0737c5185718} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gt} (T a, T b)
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}{almost\+EQ}} (T a, T b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{namespacegtest__lite}{gtest\+\_\+lite}:\+ a keretrendszer függvényinek és objektumainak névtere 
+
+\label{doc-func-members}
+\Hypertarget{namespacegtest__lite_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}\index{gtest\_lite@{gtest\_lite}!almostEQ@{almostEQ}}
+\index{almostEQ@{almostEQ}!gtest\_lite@{gtest\_lite}}
+\doxysubsubsection{\texorpdfstring{almostEQ()}{almostEQ()}}
+{\footnotesize\ttfamily \label{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61} 
+template$<$typename T$>$ \\
+bool gtest\+\_\+lite::\+almost\+EQ (\begin{DoxyParamCaption}\item[{T}]{a}{, }\item[{T}]{b}{}\end{DoxyParamCaption})}
+
+Segédsablon valós számok összehasonlításához Nem bombabiztos, de nekünk most jó lesz Elméleti hátér:\+ \href{http://www.cygnus-software.com/papers/comparingfloats/comparingfloats.htm}{\texttt{http:\+/\+/\+www.\+cygnus-\/software.\+com/\+papers/\+comparingfloats/\+comparingfloats.\+htm}} \Hypertarget{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}\index{gtest\_lite@{gtest\_lite}!eq@{eq}}
+\index{eq@{eq}!gtest\_lite@{gtest\_lite}}
+\doxysubsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily \label{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c} 
+template$<$typename T$>$ \\
+bool gtest\+\_\+lite::\+eq (\begin{DoxyParamCaption}\item[{T}]{a}{, }\item[{T}]{b}{}\end{DoxyParamCaption})}
+
+segéd sablonok a relációkhoz. azért nem STL (algorithm), mert csak a függvény lehet, hogy menjen a deduckció \Hypertarget{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}\index{gtest\_lite@{gtest\_lite}!EXPECTSTR@{EXPECTSTR}}
+\index{EXPECTSTR@{EXPECTSTR}!gtest\_lite@{gtest\_lite}}
+\doxysubsubsection{\texorpdfstring{EXPECTSTR()}{EXPECTSTR()}}
+{\footnotesize\ttfamily \label{namespacegtest__lite_afe00777c74c96b1548747863956e20a3} 
+std::\+ostream \& gtest\+\_\+lite::\+\+EXPECTSTR (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{exp}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{act}{, }\item[{bool(\texorpdfstring{$\ast$}{*}}]{pred~}{)(const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}), }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{int}]{line}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{expr}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{lhs}{ = {\ttfamily "{}elvart"{}}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{rhs}{ = {\ttfamily "{}aktual"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+stringek összehasonlításához. azért nem spec. mert a sima EQ-\/ra másként kell működnie. 

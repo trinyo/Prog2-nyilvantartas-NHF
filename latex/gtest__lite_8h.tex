@@ -1,0 +1,694 @@
+\doxysection{include/\+gtest\+\_\+lite.h File Reference}
+\hypertarget{gtest__lite_8h}{}\label{gtest__lite_8h}\index{include/gtest\_lite.h@{include/gtest\_lite.h}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$cassert$>$}\newline
+{\ttfamily \+\#include $<$cmath$>$}\newline
+{\ttfamily \+\#include $<$cstring$>$}\newline
+{\ttfamily \+\#include $<$limits$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct__Is__Types}{\+\_\+\+Is\+\_\+\+Types$<$ F, T $>$}}
+\begin{DoxyCompactList}\small\item\em Segédsablon típuskonverzió futás közbeni ellenőrzésere. \end{DoxyCompactList}\item 
+struct \doxymbox{\hyperlink{structgtest__lite_1_1Test}{gtest\+\_\+lite::\+\+Test}}
+\item 
+class \doxymbox{\hyperlink{classgtest__lite_1_1ostreamRedir}{gtest\+\_\+lite::\+ostream\+Redir}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \doxymbox{\hyperlink{namespacegtest__lite}{gtest\+\_\+lite}}
+\begin{DoxyCompactList}\small\item\em \doxylink{namespacegtest__lite}{gtest\+\_\+lite}:\+ a keretrendszer függvényinek és objektumainak névtere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a379a7b57e74521cb2c8e99f0e2779a72}{TEST}}(C,  N)
+\item 
+\Hypertarget{gtest__lite_8h_a29fd18bed01c4d836c7ebfe73a125c3f}\label{gtest__lite_8h_a29fd18bed01c4d836c7ebfe73a125c3f} 
+\+\#define {\bfseries END}~gtest\+\_\+lite::\+test.\+end(); \} while (false);
+\begin{DoxyCompactList}\small\item\em Teszteset vége. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_acc9065c889d0797062317b30fd8767d4}{ENDM}}~gtest\+\_\+lite::\+test.\+end(true); \} while (false);
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ad2e2f10cb2a494ff7ae23938dfdfc41a}{ENDMsg}}(t)
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a75adcdf89f69b0b615e395daafc315af}{SUCCEED}}()
+\begin{DoxyCompactList}\small\item\em Sikeres teszt makrója. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}{FAIL}}()
+\begin{DoxyCompactList}\small\item\em Sikertelen teszt fatális hiba makrója. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_adc16b5b0a740c39084ea5c9e960e3063}{ADD\+\_\+\+FAILURE}}()
+\begin{DoxyCompactList}\small\item\em Sikertelen teszt makrója. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_aff8385840165a184edc29446aa51936f}{EXPECT\+\_\+\+EQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Azonosságot elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_adb8a724f2c5c63ead11073c21fd51198}{EXPECT\+\_\+\+NE}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Eltérést elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ac680be4a2404c20cae831740779d11cd}{EXPECT\+\_\+\+LE}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Kisebb, vagy egyenlő relációt elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a46603095284e7bcd2f114cfdc7c79b4f}{EXPECT\+\_\+\+LT}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Kisebb, mint relációt elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_aad891c6b36689d35ee54de65351ab224}{EXPECT\+\_\+\+GE}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Nagyobb, vagy egyenlő relációt elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ac2262f96c4664cf3e170d2edaaba6c44}{EXPECT\+\_\+\+GT}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Nagyobb, mint relációt elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ab400890edc9f419e40c28a224e8ed79f}{EXPECT\+\_\+\+TRUE}}(actual)
+\begin{DoxyCompactList}\small\item\em Igaz értéket elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a58cae60fff88d713c4850b50d3e592a6}{EXPECT\+\_\+\+FALSE}}(actual)
+\begin{DoxyCompactList}\small\item\em Hamis értéket elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a5ce7d58df8cb696aa05e77c2370de7a8}{EXPECT\+\_\+\+FLOAT\+\_\+\+EQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Valós számok azonosságát elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a6e6277442d96cd18300619c321614397}{EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Valós számok azonosságát elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a5b4b193a92c39b99d7b9404c49feef0b}{EXPECT\+\_\+\+STREQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em C stringek (const char \texorpdfstring{$\ast$}{*}) azonosságát tesztelő makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_aa511aad7b6a6a8e8d0279f16d925b094}{EXPECT\+\_\+\+STRNE}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em C stringek (const char \texorpdfstring{$\ast$}{*}) eltéréset tesztelő makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_acd0cb7ae81a768e9cc639804a478e71c}{EXPECT\+\_\+\+STRCASEEQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em C stringek (const char \texorpdfstring{$\ast$}{*}) azonosságát tesztelő makró (kisbetű/\+nagybetű azonos). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a6ab5f4af3f8a388af059dbd497910ee5}{EXPECT\+\_\+\+STRCASENE}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em C stringek (const char \texorpdfstring{$\ast$}{*}) eltéréset tesztelő makró (kisbetű/\+nagybetű azonos). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a4b4fe697f312ef7d2618905a9bc12f04}{EXPECT\+\_\+\+THROW}}(statement,  exception\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Kivételt várunk. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a9be43f44d148e8a8d6a89c864bf4e461}{EXPECT\+\_\+\+ANY\+\_\+\+THROW}}(statement)
+\begin{DoxyCompactList}\small\item\em Kivételt várunk. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a2743a1438137ad857aa3f9fec3ff67ec}{EXPECT\+\_\+\+NO\+\_\+\+THROW}}(statement)
+\begin{DoxyCompactList}\small\item\em Nem várunk kivételt. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a895c34d9b192cdc2ba46d2680623485d}{ASSERT\+\_\+\+NO\+\_\+\+THROW}}(statement)
+\begin{DoxyCompactList}\small\item\em Nem várunk kivételt. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a5129ea3a961fbd7fe71e6621452047bf}{EXPECT\+\_\+\+THROW\+\_\+\+THROW}}(statement,  exception\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Kivételt várunk és továbbdobjuk -- ilyen nincs a gtest-\/ben. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a167ba84ecdae79d9d8db07ee949ef9eb}{EXPECT\+\_\+\+ENVEQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Környezeti változóhoz hasonlít -- ilyen nincs a gtest-\/ben. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_af08de545266a5b3ebfdf5dac3791bad3}{EXPECT\+\_\+\+ENVCASEEQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Környezeti változóhoz hasonlít -- ilyen nincs a gtest-\/ben (kisbetű/\+nagybetű azonos). \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ad806a5e5813ea769dc2edbb5f6e3949d}{ASSERT\+\_\+\+EQ}}(expected,  actual)
+\begin{DoxyCompactList}\small\item\em Azonosságot elváró makró \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a77f20a3b35b3be462195f4bc49f2b72a}{ASSERT\+\_\+\+NO\+\_\+\+THROW}}(statement)
+\begin{DoxyCompactList}\small\item\em Nem várunk kivételt. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a34bf9a881eb6b2800b0e6cb0abdbd319}{CREATE\+\_\+\+Has\+\_\+}}(X)
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a046385e9a6e593b9e13394d7a9260e40}{CREATE\+\_\+\+Has\+\_\+fn\+\_\+}}(X,  S)
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a59f6c1f1654aa9d5adf5c143efd1a454}{EXPECTTHROW}}(statement,  exp,  act)
+\begin{DoxyCompactList}\small\item\em EXPECTTHROW:\+ kivételkezelés. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_a5137d2bbeb7baffffe2e477a450fd48b}{ASSERTTHROW}}(statement,  exp,  act)
+\item 
+\+\#define \doxymbox{\hyperlink{gtest__lite_8h_ab476c9b9c74e37c420040dbcc9a02615}{ASSERT\+\_\+}}(expected,  actual,  fn,  op)
+\item 
+\Hypertarget{gtest__lite_8h_a428e5e5ea2b7f67a0b68fbf57ea0faa7}\label{gtest__lite_8h_a428e5e5ea2b7f67a0b68fbf57ea0faa7} 
+\+\#define {\bfseries GTINIT}(IS)
+\item 
+\Hypertarget{gtest__lite_8h_a20ba54bca307f985eb448f71e6896dd5}\label{gtest__lite_8h_a20ba54bca307f985eb448f71e6896dd5} 
+\+\#define {\bfseries GTEND}(os)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{gtest__lite_8h_aa57e54fc7cbf742de576263d90ee1660}{has\+Member}} (...)
+\item 
+\Hypertarget{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}\label{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27} 
+{\footnotesize template$<$typename T1, typename T2$>$ }\\std::\+ostream \& {\bfseries gtest\+\_\+lite::\+\+EXPECT\+\_\+} (T1 exp, T2 act, bool(\texorpdfstring{$\ast$}{*}pred)(T1, T1), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\begin{DoxyCompactList}\small\item\em általános sablon a várt értékhez. \end{DoxyCompactList}\item 
+\Hypertarget{namespacegtest__lite_a4084b4c8a7b57ae066f092fb580b1d99}\label{namespacegtest__lite_a4084b4c8a7b57ae066f092fb580b1d99} 
+{\footnotesize template$<$typename T1, typename T2$>$ }\\std::\+ostream \& {\bfseries gtest\+\_\+lite::\+\+EXPECT\+\_\+} (T1 \texorpdfstring{$\ast$}{*}exp, T2 \texorpdfstring{$\ast$}{*}act, bool(\texorpdfstring{$\ast$}{*}pred)(T1 \texorpdfstring{$\ast$}{*}, T1 \texorpdfstring{$\ast$}{*}), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\begin{DoxyCompactList}\small\item\em pointerre specializált sablon a várt értékhez. \end{DoxyCompactList}\item 
+std::\+ostream \& \doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\+\_\+lite::\+\+EXPECTSTR}} (const char \texorpdfstring{$\ast$}{*}exp, const char \texorpdfstring{$\ast$}{*}act, bool(\texorpdfstring{$\ast$}{*}pred)(const char \texorpdfstring{$\ast$}{*}, const char \texorpdfstring{$\ast$}{*}), const char \texorpdfstring{$\ast$}{*}file, int line, const char \texorpdfstring{$\ast$}{*}expr, const char \texorpdfstring{$\ast$}{*}lhs="{}elvart"{}, const char \texorpdfstring{$\ast$}{*}rhs="{}aktual"{})
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{gtest\+\_\+lite::\+eq}} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a34055f353dabbe4ed9063f1d36af6022}\label{namespacegtest__lite_a34055f353dabbe4ed9063f1d36af6022} 
+bool {\bfseries gtest\+\_\+lite::\+eqstr} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a50e47b21dec025ed15ef3767e556d038}\label{namespacegtest__lite_a50e47b21dec025ed15ef3767e556d038} 
+bool {\bfseries gtest\+\_\+lite::\+eqstrcase} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a9a1485affebbed604f7cac69f70072dc}\label{namespacegtest__lite_a9a1485affebbed604f7cac69f70072dc} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gtest\+\_\+lite::\+ne} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a0a34b1bb0d55bc0c6a3e878ec2bcd49f}\label{namespacegtest__lite_a0a34b1bb0d55bc0c6a3e878ec2bcd49f} 
+bool {\bfseries gtest\+\_\+lite::\+nestr} (const char \texorpdfstring{$\ast$}{*}a, const char \texorpdfstring{$\ast$}{*}b)
+\item 
+\Hypertarget{namespacegtest__lite_a92068d494867b61abeef5942eefac3a3}\label{namespacegtest__lite_a92068d494867b61abeef5942eefac3a3} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gtest\+\_\+lite::\+le} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_acfefb55c5d3713c79b659bbd18d9423c}\label{namespacegtest__lite_acfefb55c5d3713c79b659bbd18d9423c} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gtest\+\_\+lite::\+lt} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_ae8c2517b99b688c6136d8c7c18551da5}\label{namespacegtest__lite_ae8c2517b99b688c6136d8c7c18551da5} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gtest\+\_\+lite::\+ge} (T a, T b)
+\item 
+\Hypertarget{namespacegtest__lite_a2075d101da98f80f569b0737c5185718}\label{namespacegtest__lite_a2075d101da98f80f569b0737c5185718} 
+{\footnotesize template$<$typename T$>$ }\\bool {\bfseries gtest\+\_\+lite::\+gt} (T a, T b)
+\item 
+{\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}{gtest\+\_\+lite::\+almost\+EQ}} (T a, T b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+(v4/\+2022)
+
+Google gtest keretrendszerhez hasonló rendszer. Sz.\+I. 2015., 2016., 2017. ({\itshape Has\+\_\+X) Sz.\+I. 2018 (template), ENDM, ENDMsg, nullptr\+\_\+t Sz.\+I. 2019 singleton Sz.\+I. 2021 ASSERT.., STRCASE... Sz.\+I. 2021 EXPEXT\+\_\+\+REGEXP, CREATE\+\_\+\+Has\+\_\+fn}, cmp w. NULL, EXPECT\+\_\+ param fix V.\+B., Sz.\+I. 2022 almost\+EQ fix, Sz.\+I. 2022. EXPECT\+\_\+\+THROW fix
+
+A tesztelés legalapvetőbb funkcióit támogató függvények és makrók. Nem szálbiztos megvalósítás.
+
+Szabadon felhasználható, bővíthető.
+
+Használati példa:\+ Teszteljük az f(x)=2\texorpdfstring{$\ast$}{*}x függvényt:\+ int f(int x) \{ return 2\texorpdfstring{$\ast$}{*}x; \}
+
+int main() \{ \doxylink{gtest__lite_8h_a379a7b57e74521cb2c8e99f0e2779a72}{TEST(\+Tesz\+Eset\+Neve, Teszt\+Neve)} \doxylink{gtest__lite_8h_aff8385840165a184edc29446aa51936f}{EXPECT\+\_\+\+EQ(0, f(0))}; \doxylink{gtest__lite_8h_aff8385840165a184edc29446aa51936f}{EXPECT\+\_\+\+EQ(4, f(2))} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+A függvény hibás eredményt adott"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std::\+endl; ... END ... /\+/\+ Fatális hiba esetén a teszteset nem fut tovább. Ezek az ASSERT... makrók. /\+/\+ Nem lehet a kiírásukhoz további üzenetet fűzni. PL:\+ \doxylink{gtest__lite_8h_a379a7b57e74521cb2c8e99f0e2779a72}{TEST(\+Tesz\+Eset\+Neve, Teszt\+Neve)} \doxylink{gtest__lite_8h_a895c34d9b192cdc2ba46d2680623485d}{ASSERT\+\_\+\+NO\+\_\+\+THROW(f(0))}; /\+/\+ itt nem lehet \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}duma"{} \doxylink{gtest__lite_8h_aff8385840165a184edc29446aa51936f}{EXPECT\+\_\+\+EQ(4, f(2))} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} "{}\+A függvény hibás eredményt adott"{} \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} std::\+endl; ... END ...
+
+A működés részleteinek megértése szorgalmi feladat. 
+
+\label{doc-define-members}
+\Hypertarget{gtest__lite_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{gtest__lite_8h_adc16b5b0a740c39084ea5c9e960e3063}\index{gtest\_lite.h@{gtest\_lite.h}!ADD\_FAILURE@{ADD\_FAILURE}}
+\index{ADD\_FAILURE@{ADD\_FAILURE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ADD\_FAILURE}{ADD\_FAILURE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_adc16b5b0a740c39084ea5c9e960e3063} 
+\+\#define ADD\+\_\+\+FAILURE(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.expect(\textcolor{keyword}{false},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}ADD\_FAILURE()"{}},\ \textcolor{keyword}{true})}
+
+\end{DoxyCode}
+
+
+Sikertelen teszt makrója. 
+
+\Hypertarget{gtest__lite_8h_ab476c9b9c74e37c420040dbcc9a02615}\index{gtest\_lite.h@{gtest\_lite.h}!ASSERT\_@{ASSERT\_}}
+\index{ASSERT\_@{ASSERT\_}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_}{ASSERT\_}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ab476c9b9c74e37c420040dbcc9a02615} 
+\+\#define ASSERT\+\_\+(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{, }\item[{}]{fn}{, }\item[{}]{op}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{EXPECT\_(expected,\ actual,\ fn,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#op\ \textcolor{stringliteral}{"{}("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ );\ \(\backslash\)}
+\DoxyCodeLine{if\ (!gtest\_lite::test.status)\ \{\ gtest\_lite::test.end();\ \textcolor{keywordflow}{break};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{gtest__lite_8h_ad806a5e5813ea769dc2edbb5f6e3949d}\index{gtest\_lite.h@{gtest\_lite.h}!ASSERT\_EQ@{ASSERT\_EQ}}
+\index{ASSERT\_EQ@{ASSERT\_EQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_EQ}{ASSERT\_EQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ad806a5e5813ea769dc2edbb5f6e3949d} 
+\+\#define ASSERT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::ASSERT\_(expected,\ actual,\ \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{gtest\_lite::eq}},\ \textcolor{stringliteral}{"{}ASSER\_EQ"{}})}
+
+\end{DoxyCode}
+
+
+Azonosságot elváró makró 
+
+\DoxyHorRuler{0}
+ ASSERT típusú ellenőrzések. CSak 1-\/2 van megvalósítva. Nem ostream\& -\/val térnek vissza !!! Kivételt várunk \Hypertarget{gtest__lite_8h_a77f20a3b35b3be462195f4bc49f2b72a}\index{gtest\_lite.h@{gtest\_lite.h}!ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}}
+\index{ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_NO\_THROW}{ASSERT\_NO\_THROW}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a77f20a3b35b3be462195f4bc49f2b72a} 
+\+\#define ASSERT\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ \}\(\backslash\)}
+\DoxyCodeLine{ASSERTTHROW(statement,\ \textcolor{stringliteral}{"{}nem\ dob\ kivetelt."{}},\ \textcolor{stringliteral}{"{}kivetelt\ dobott."{}})}
+
+\end{DoxyCode}
+
+
+Nem várunk kivételt. 
+
+\Hypertarget{gtest__lite_8h_a895c34d9b192cdc2ba46d2680623485d}\index{gtest\_lite.h@{gtest\_lite.h}!ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}}
+\index{ASSERT\_NO\_THROW@{ASSERT\_NO\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ASSERT\_NO\_THROW}{ASSERT\_NO\_THROW}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a895c34d9b192cdc2ba46d2680623485d} 
+\+\#define ASSERT\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ \}\(\backslash\)}
+\DoxyCodeLine{ASSERTTHROW(statement,\ \textcolor{stringliteral}{"{}nem\ dob\ kivetelt."{}},\ \textcolor{stringliteral}{"{}kivetelt\ dobott."{}})}
+
+\end{DoxyCode}
+
+
+Nem várunk kivételt. 
+
+\Hypertarget{gtest__lite_8h_a5137d2bbeb7baffffe2e477a450fd48b}\index{gtest\_lite.h@{gtest\_lite.h}!ASSERTTHROW@{ASSERTTHROW}}
+\index{ASSERTTHROW@{ASSERTTHROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ASSERTTHROW}{ASSERTTHROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a5137d2bbeb7baffffe2e477a450fd48b} 
+\+\#define ASSERTTHROW(\begin{DoxyParamCaption}\item[{}]{statement}{, }\item[{}]{exp}{, }\item[{}]{act}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.expect(gtest\_lite::test.tmp,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#statement)\ \(\backslash\)}
+\DoxyCodeLine{<<\ \textcolor{stringliteral}{"{}**\ Az\ utasitas\ "{}}\ <<\ (act)\ \(\backslash\)}
+\DoxyCodeLine{<<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ Azt\ vartuk,\ hogy\ "{}}\ <<\ (exp)\ <<\ std::endl;\ \textcolor{keywordflow}{if}\ (!gtest\_lite::test.status)\ \{\ gtest\_lite::test.end();\ \textcolor{keywordflow}{break};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{gtest__lite_8h_a34bf9a881eb6b2800b0e6cb0abdbd319}\index{gtest\_lite.h@{gtest\_lite.h}!CREATE\_Has\_@{CREATE\_Has\_}}
+\index{CREATE\_Has\_@{CREATE\_Has\_}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_Has\_}{CREATE\_Has\_}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a34bf9a881eb6b2800b0e6cb0abdbd319} 
+\+\#define CREATE\+\_\+\+Has\+\_\+(\begin{DoxyParamCaption}\item[{}]{X}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{struct\ }\_Has\_\#\#X\ \{\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{struct\ }Fallback\ \{\ \textcolor{keywordtype}{int}\ X;\ \};\ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{struct\ }Derived\ :\ T,\ Fallback\ \{\};\ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ C,\ C>\ \textcolor{keyword}{struct\ }ChT;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(ChT<int\ Fallback::*,\ \&D::X>*))[1];\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(...))[2];\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{const}\ member\ =\ \textcolor{keyword}{sizeof}(f<Derived>(0))\ ==\ 2;\ \(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+Segédmakró egy adattag, vagy tagfüggvény létezésének tesztelésére futási időben Ötlet:\+ \href{https://cpptalk.wordpress.com/2009/09/12/substitution-failure-is-not-an-error-2}{\texttt{https:\+/\+/\+cpptalk.\+wordpress.\+com/\+2009/\+09/\+12/\+substitution-\/failure-\/is-\/not-\/an-\/error-\/2}} Használat:\+ \doxylink{gtest__lite_8h_a34bf9a881eb6b2800b0e6cb0abdbd319}{CREATE\+\_\+\+Has\+\_\+(size)} ... if (\+\_\+\+Has\+\_\+size$<$std::\+string$>$::\+member)... \Hypertarget{gtest__lite_8h_a046385e9a6e593b9e13394d7a9260e40}\index{gtest\_lite.h@{gtest\_lite.h}!CREATE\_Has\_fn\_@{CREATE\_Has\_fn\_}}
+\index{CREATE\_Has\_fn\_@{CREATE\_Has\_fn\_}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_Has\_fn\_}{CREATE\_Has\_fn\_}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a046385e9a6e593b9e13394d7a9260e40} 
+\+\#define CREATE\+\_\+\+Has\+\_\+fn\+\_\+(\begin{DoxyParamCaption}\item[{}]{X}{, }\item[{}]{S}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ R,\ \textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{struct\ }\_Has\_fn\_\#\#X\#\#\_\#\#S\ \{\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ C,\ R\ (C::*f)()\ S>\ \textcolor{keyword}{struct\ }ChT;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(ChT<D,\ \&D::X>*))[1];\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ D>\ \textcolor{keyword}{static}\ char\ (\&f(...))[2];\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \textcolor{keyword}{const}\ fn\ =\ \textcolor{keyword}{sizeof}(f<T>(0))\ ==\ 1;\ \(\backslash\)}
+\DoxyCodeLine{\};}
+
+\end{DoxyCode}
+\Hypertarget{gtest__lite_8h_acc9065c889d0797062317b30fd8767d4}\index{gtest\_lite.h@{gtest\_lite.h}!ENDM@{ENDM}}
+\index{ENDM@{ENDM}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ENDM}{ENDM}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_acc9065c889d0797062317b30fd8767d4} 
+\+\#define ENDM~gtest\+\_\+lite::\+test.\+end(true); \} while (false);}
+
+Teszteset vége allokált blokkok számának összehasonlításával Ez az ellenőrzés nem bomba biztos. \Hypertarget{gtest__lite_8h_ad2e2f10cb2a494ff7ae23938dfdfc41a}\index{gtest\_lite.h@{gtest\_lite.h}!ENDMsg@{ENDMsg}}
+\index{ENDMsg@{ENDMsg}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{ENDMsg}{ENDMsg}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ad2e2f10cb2a494ff7ae23938dfdfc41a} 
+\+\#define ENDMsg(\begin{DoxyParamCaption}\item[{}]{t}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.end(\textcolor{keyword}{true})\ <<\ t\ <<\ std::endl;\ \}\ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{false});}
+
+\end{DoxyCode}
+Teszteset vége allokált blokkok számának összehasonlításával Ez az ellenőrzés nem bomba biztos. Ha hiba van kiírja az üzenetet. \Hypertarget{gtest__lite_8h_a9be43f44d148e8a8d6a89c864bf4e461}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}}
+\index{EXPECT\_ANY\_THROW@{EXPECT\_ANY\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ANY\_THROW}{EXPECT\_ANY\_THROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a9be43f44d148e8a8d6a89c864bf4e461} 
+\+\#define EXPECT\+\_\+\+ANY\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ \}\ \(\backslash\)}
+\DoxyCodeLine{EXPECTTHROW(statement,\ \textcolor{stringliteral}{"{}kivetelt\ dob."{}},\ \textcolor{stringliteral}{"{}nem\ dobott\ kivetelt."{}})}
+
+\end{DoxyCode}
+
+
+Kivételt várunk. 
+
+\Hypertarget{gtest__lite_8h_a6e6277442d96cd18300619c321614397}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}}
+\index{EXPECT\_DOUBLE\_EQ@{EXPECT\_DOUBLE\_EQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_DOUBLE\_EQ}{EXPECT\_DOUBLE\_EQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a6e6277442d96cd18300619c321614397} 
+\+\#define EXPECT\+\_\+\+DOUBLE\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ \doxymbox{\hyperlink{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}{gtest\_lite::almostEQ}},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_DOUBLE\_EQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Valós számok azonosságát elváró makró 
+
+\Hypertarget{gtest__lite_8h_af08de545266a5b3ebfdf5dac3791bad3}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_ENVCASEEQ@{EXPECT\_ENVCASEEQ}}
+\index{EXPECT\_ENVCASEEQ@{EXPECT\_ENVCASEEQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ENVCASEEQ}{EXPECT\_ENVCASEEQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_af08de545266a5b3ebfdf5dac3791bad3} 
+\+\#define EXPECT\+\_\+\+ENVCASEEQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(std::getenv(expected),\ actual,\ gtest\_lite::eqstrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_ENVCASEEQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Környezeti változóhoz hasonlít -- ilyen nincs a gtest-\/ben (kisbetű/\+nagybetű azonos). 
+
+\Hypertarget{gtest__lite_8h_a167ba84ecdae79d9d8db07ee949ef9eb}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_ENVEQ@{EXPECT\_ENVEQ}}
+\index{EXPECT\_ENVEQ@{EXPECT\_ENVEQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_ENVEQ}{EXPECT\_ENVEQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a167ba84ecdae79d9d8db07ee949ef9eb} 
+\+\#define EXPECT\+\_\+\+ENVEQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(std::getenv(expected),\ actual,\ gtest\_lite::eqstr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_ENVEQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Környezeti változóhoz hasonlít -- ilyen nincs a gtest-\/ben. 
+
+\Hypertarget{gtest__lite_8h_aff8385840165a184edc29446aa51936f}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_EQ@{EXPECT\_EQ}}
+\index{EXPECT\_EQ@{EXPECT\_EQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_EQ}{EXPECT\_EQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_aff8385840165a184edc29446aa51936f} 
+\+\#define EXPECT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{gtest\_lite::eq}},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_EQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Azonosságot elváró makró 
+
+\Hypertarget{gtest__lite_8h_a58cae60fff88d713c4850b50d3e592a6}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_FALSE@{EXPECT\_FALSE}}
+\index{EXPECT\_FALSE@{EXPECT\_FALSE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FALSE}{EXPECT\_FALSE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a58cae60fff88d713c4850b50d3e592a6} 
+\+\#define EXPECT\+\_\+\+FALSE(\begin{DoxyParamCaption}\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(\textcolor{keyword}{false},\ actual,\ \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{gtest\_lite::eq}},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_FALSE("{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Hamis értéket elváró makró 
+
+\Hypertarget{gtest__lite_8h_a5ce7d58df8cb696aa05e77c2370de7a8}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_FLOAT\_EQ@{EXPECT\_FLOAT\_EQ}}
+\index{EXPECT\_FLOAT\_EQ@{EXPECT\_FLOAT\_EQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_FLOAT\_EQ}{EXPECT\_FLOAT\_EQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a5ce7d58df8cb696aa05e77c2370de7a8} 
+\+\#define EXPECT\+\_\+\+FLOAT\+\_\+\+EQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ \doxymbox{\hyperlink{namespacegtest__lite_affbf9748c4e4dec6db137f7c147fee61}{gtest\_lite::almostEQ}},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_FLOAT\_EQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Valós számok azonosságát elváró makró 
+
+\Hypertarget{gtest__lite_8h_aad891c6b36689d35ee54de65351ab224}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_GE@{EXPECT\_GE}}
+\index{EXPECT\_GE@{EXPECT\_GE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_GE}{EXPECT\_GE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_aad891c6b36689d35ee54de65351ab224} 
+\+\#define EXPECT\+\_\+\+GE(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ gtest\_lite::ge,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_GE("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+Nagyobb, vagy egyenlő relációt elváró makró 
+
+\Hypertarget{gtest__lite_8h_ac2262f96c4664cf3e170d2edaaba6c44}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_GT@{EXPECT\_GT}}
+\index{EXPECT\_GT@{EXPECT\_GT}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_GT}{EXPECT\_GT}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ac2262f96c4664cf3e170d2edaaba6c44} 
+\+\#define EXPECT\+\_\+\+GT(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ gtest\_lite::gt,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_GT("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+Nagyobb, mint relációt elváró makró 
+
+\Hypertarget{gtest__lite_8h_ac680be4a2404c20cae831740779d11cd}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_LE@{EXPECT\_LE}}
+\index{EXPECT\_LE@{EXPECT\_LE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_LE}{EXPECT\_LE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ac680be4a2404c20cae831740779d11cd} 
+\+\#define EXPECT\+\_\+\+LE(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ gtest\_lite::le,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_LE("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+Kisebb, vagy egyenlő relációt elváró makró 
+
+\Hypertarget{gtest__lite_8h_a46603095284e7bcd2f114cfdc7c79b4f}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_LT@{EXPECT\_LT}}
+\index{EXPECT\_LT@{EXPECT\_LT}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_LT}{EXPECT\_LT}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a46603095284e7bcd2f114cfdc7c79b4f} 
+\+\#define EXPECT\+\_\+\+LT(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ gtest\_lite::lt,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_LT("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+Kisebb, mint relációt elváró makró 
+
+\Hypertarget{gtest__lite_8h_adb8a724f2c5c63ead11073c21fd51198}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_NE@{EXPECT\_NE}}
+\index{EXPECT\_NE@{EXPECT\_NE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_NE}{EXPECT\_NE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_adb8a724f2c5c63ead11073c21fd51198} 
+\+\#define EXPECT\+\_\+\+NE(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(expected,\ actual,\ gtest\_lite::ne,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_NE("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+Eltérést elváró makró 
+
+\Hypertarget{gtest__lite_8h_a2743a1438137ad857aa3f9fec3ff67ec}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_NO\_THROW@{EXPECT\_NO\_THROW}}
+\index{EXPECT\_NO\_THROW@{EXPECT\_NO\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_NO\_THROW}{EXPECT\_NO\_THROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a2743a1438137ad857aa3f9fec3ff67ec} 
+\+\#define EXPECT\+\_\+\+NO\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ \}\(\backslash\)}
+\DoxyCodeLine{EXPECTTHROW(statement,\ \textcolor{stringliteral}{"{}nem\ dob\ kivetelt."{}},\ \textcolor{stringliteral}{"{}kivetelt\ dobott."{}})}
+
+\end{DoxyCode}
+
+
+Nem várunk kivételt. 
+
+\Hypertarget{gtest__lite_8h_acd0cb7ae81a768e9cc639804a478e71c}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_STRCASEEQ@{EXPECT\_STRCASEEQ}}
+\index{EXPECT\_STRCASEEQ@{EXPECT\_STRCASEEQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_STRCASEEQ}{EXPECT\_STRCASEEQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_acd0cb7ae81a768e9cc639804a478e71c} 
+\+\#define EXPECT\+\_\+\+STRCASEEQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(expected,\ actual,\ gtest\_lite::eqstrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_STRCASEEQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+C stringek (const char \texorpdfstring{$\ast$}{*}) azonosságát tesztelő makró (kisbetű/\+nagybetű azonos). 
+
+\Hypertarget{gtest__lite_8h_a6ab5f4af3f8a388af059dbd497910ee5}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_STRCASENE@{EXPECT\_STRCASENE}}
+\index{EXPECT\_STRCASENE@{EXPECT\_STRCASENE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_STRCASENE}{EXPECT\_STRCASENE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a6ab5f4af3f8a388af059dbd497910ee5} 
+\+\#define EXPECT\+\_\+\+STRCASENE(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(expected,\ actual,\ gtest\_lite::nestrcase,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_STRCASENE("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+C stringek (const char \texorpdfstring{$\ast$}{*}) eltéréset tesztelő makró (kisbetű/\+nagybetű azonos). 
+
+\Hypertarget{gtest__lite_8h_a5b4b193a92c39b99d7b9404c49feef0b}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_STREQ@{EXPECT\_STREQ}}
+\index{EXPECT\_STREQ@{EXPECT\_STREQ}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_STREQ}{EXPECT\_STREQ}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a5b4b193a92c39b99d7b9404c49feef0b} 
+\+\#define EXPECT\+\_\+\+STREQ(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(expected,\ actual,\ gtest\_lite::eqstr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_STREQ("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+C stringek (const char \texorpdfstring{$\ast$}{*}) azonosságát tesztelő makró 
+
+\Hypertarget{gtest__lite_8h_aa511aad7b6a6a8e8d0279f16d925b094}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_STRNE@{EXPECT\_STRNE}}
+\index{EXPECT\_STRNE@{EXPECT\_STRNE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_STRNE}{EXPECT\_STRNE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_aa511aad7b6a6a8e8d0279f16d925b094} 
+\+\#define EXPECT\+\_\+\+STRNE(\begin{DoxyParamCaption}\item[{}]{expected}{, }\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_afe00777c74c96b1548747863956e20a3}{gtest\_lite::EXPECTSTR}}(expected,\ actual,\ gtest\_lite::nestr,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_STRNE("{}}\ \#expected\ \textcolor{stringliteral}{"{},\ "{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}},\ \textcolor{stringliteral}{"{}etalon"{}}\ )}
+
+\end{DoxyCode}
+
+
+C stringek (const char \texorpdfstring{$\ast$}{*}) eltéréset tesztelő makró 
+
+\Hypertarget{gtest__lite_8h_a4b4fe697f312ef7d2618905a9bc12f04}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_THROW@{EXPECT\_THROW}}
+\index{EXPECT\_THROW@{EXPECT\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_THROW}{EXPECT\_THROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a4b4fe697f312ef7d2618905a9bc12f04} 
+\+\#define EXPECT\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{, }\item[{}]{exception\+\_\+type}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (exception\_type\ \&e)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (...)\ \{\ \}\ \(\backslash\)}
+\DoxyCodeLine{EXPECTTHROW(statement,\ \textcolor{stringliteral}{"{}kivetelt\ dob."{}},\ \textcolor{stringliteral}{"{}nem\ dobott\ '"{}}\#exception\_type\textcolor{stringliteral}{"{}'\ kivetelt."{}})}
+
+\end{DoxyCode}
+
+
+Kivételt várunk. 
+
+\Hypertarget{gtest__lite_8h_a5129ea3a961fbd7fe71e6621452047bf}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_THROW\_THROW@{EXPECT\_THROW\_THROW}}
+\index{EXPECT\_THROW\_THROW@{EXPECT\_THROW\_THROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_THROW\_THROW}{EXPECT\_THROW\_THROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a5129ea3a961fbd7fe71e6621452047bf} 
+\+\#define EXPECT\+\_\+\+THROW\+\_\+\+THROW(\begin{DoxyParamCaption}\item[{}]{statement}{, }\item[{}]{exception\+\_\+type}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{try}\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{false};\ statement;\ \}\ \(\backslash\)}
+\DoxyCodeLine{catch\ (exception\_type\ \&e)\ \{\ gtest\_lite::test.tmp\ =\ \textcolor{keyword}{true};\ \textcolor{keywordflow}{throw};\ \}\ \(\backslash\)}
+\DoxyCodeLine{EXPECTTHROW(statement,\ \textcolor{stringliteral}{"{}kivetelt\ dob."{}},\ \textcolor{stringliteral}{"{}nem\ dobott\ '"{}}\#exception\_type\textcolor{stringliteral}{"{}'\ kivetelt."{}})}
+
+\end{DoxyCode}
+
+
+Kivételt várunk és továbbdobjuk -- ilyen nincs a gtest-\/ben. 
+
+\Hypertarget{gtest__lite_8h_ab400890edc9f419e40c28a224e8ed79f}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECT\_TRUE@{EXPECT\_TRUE}}
+\index{EXPECT\_TRUE@{EXPECT\_TRUE}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECT\_TRUE}{EXPECT\_TRUE}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_ab400890edc9f419e40c28a224e8ed79f} 
+\+\#define EXPECT\+\_\+\+TRUE(\begin{DoxyParamCaption}\item[{}]{actual}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{namespacegtest__lite_a1fbaa289aec16a76c60e05dd9bb13d27}{gtest\_lite::EXPECT\_}}(\textcolor{keyword}{true},\ actual,\ \ \doxymbox{\hyperlink{namespacegtest__lite_aa7762f23094d59c699ec402e1a37640c}{gtest\_lite::eq}},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}EXPECT\_TRUE("{}}\ \#actual\ \textcolor{stringliteral}{"{})"{}}\ )}
+
+\end{DoxyCode}
+
+
+Igaz értéket elváró makró 
+
+\Hypertarget{gtest__lite_8h_a59f6c1f1654aa9d5adf5c143efd1a454}\index{gtest\_lite.h@{gtest\_lite.h}!EXPECTTHROW@{EXPECTTHROW}}
+\index{EXPECTTHROW@{EXPECTTHROW}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{EXPECTTHROW}{EXPECTTHROW}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a59f6c1f1654aa9d5adf5c143efd1a454} 
+\+\#define EXPECTTHROW(\begin{DoxyParamCaption}\item[{}]{statement}{, }\item[{}]{exp}{, }\item[{}]{act}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.expect(gtest\_lite::test.tmp,\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \#statement)\ \(\backslash\)}
+\DoxyCodeLine{<<\ \textcolor{stringliteral}{"{}**\ Az\ utasitas\ "{}}\ <<\ (act)\ \(\backslash\)}
+\DoxyCodeLine{<<\ \textcolor{stringliteral}{"{}\(\backslash\)n**\ Azt\ vartuk,\ hogy\ "{}}\ <<\ (exp)\ <<\ std::endl}
+
+\end{DoxyCode}
+
+
+EXPECTTHROW:\+ kivételkezelés. 
+
+\DoxyHorRuler{0}
+ Belső megvalósításhoz tartozó makrók, és osztályok. \hypertarget{gtest__lite_8h_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{Nem célszerű közvetlenül használni, vagy módosítani}{Nem célszerű közvetlenül használni, vagy módosítani}}\label{gtest__lite_8h_autotoc_md0}
+\Hypertarget{gtest__lite_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed}\index{gtest\_lite.h@{gtest\_lite.h}!FAIL@{FAIL}}
+\index{FAIL@{FAIL}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{FAIL}{FAIL}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a3e26a8d27caa386ed0ea7ce9d5b7c4ed} 
+\+\#define FAIL(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.expect(\textcolor{keyword}{false},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}FAIL()"{}},\ \textcolor{keyword}{true})}
+
+\end{DoxyCode}
+
+
+Sikertelen teszt fatális hiba makrója. 
+
+\Hypertarget{gtest__lite_8h_a75adcdf89f69b0b615e395daafc315af}\index{gtest\_lite.h@{gtest\_lite.h}!SUCCEED@{SUCCEED}}
+\index{SUCCEED@{SUCCEED}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{SUCCEED}{SUCCEED}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a75adcdf89f69b0b615e395daafc315af} 
+\+\#define SUCCEED(\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gtest\_lite::test.expect(\textcolor{keyword}{true},\ \_\_FILE\_\_,\ \_\_LINE\_\_,\ \textcolor{stringliteral}{"{}SUCCEED()"{}},\ \textcolor{keyword}{true})}
+
+\end{DoxyCode}
+
+
+Sikeres teszt makrója. 
+
+\Hypertarget{gtest__lite_8h_a379a7b57e74521cb2c8e99f0e2779a72}\index{gtest\_lite.h@{gtest\_lite.h}!TEST@{TEST}}
+\index{TEST@{TEST}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{TEST}{TEST}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_a379a7b57e74521cb2c8e99f0e2779a72} 
+\+\#define TEST(\begin{DoxyParamCaption}\item[{}]{C}{, }\item[{}]{N}{}\end{DoxyParamCaption})}
+
+{\bfseries Value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{do}\ \{\ gtest\_lite::test.begin(\#C\textcolor{stringliteral}{"{}."{}}\#N);}
+
+\end{DoxyCode}
+Teszt kezdete. A makró paraméterezése hasonlít a gtest paraméterezéséhez. Így az itt elkészített testek könnyen átemelhetők a gtest keretrendszerbe. 
+\begin{DoxyParams}{Parameters}
+{\em C} & -\/ teszteset neve (csak a gtest kompatibilitás miatt van külön neve az eseteknek) \\
+\hline
+{\em N} & -\/ teszt neve \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{gtest__lite_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{gtest__lite_8h_aa57e54fc7cbf742de576263d90ee1660}\index{gtest\_lite.h@{gtest\_lite.h}!hasMember@{hasMember}}
+\index{hasMember@{hasMember}!gtest\_lite.h@{gtest\_lite.h}}
+\doxysubsubsection{\texorpdfstring{hasMember()}{hasMember()}}
+{\footnotesize\ttfamily \label{gtest__lite_8h_aa57e54fc7cbf742de576263d90ee1660} 
+void has\+Member (\begin{DoxyParamCaption}\item[{}]{...}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Segédfüggvény egy publikus adattag, vagy tagfüggvény létezésének tesztelésére fordítási időben 

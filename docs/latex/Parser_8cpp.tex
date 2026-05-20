@@ -1,0 +1,51 @@
+\doxysection{src/\+\+Parser.cpp File Reference}
+\hypertarget{Parser_8cpp}{}\label{Parser_8cpp}\index{src/Parser.cpp@{src/Parser.cpp}}
+
+
+\doxylink{classParser}{Parser} osztaly tagfuggvenyeinek megvalositasa. Beolvasas, tarolas, kereses es listazas funkciok.  
+
+
+{\ttfamily \+\#include "{}../\+include/\+\+Parser.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+include/\+\+Hallgato.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+include/\+\+Oktato.\+h"{}}\newline
+{\ttfamily \+\#include "{}../\+include/\+memtrace.\+h"{}}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{Parser_8cpp_a897f49f42aa9d260aa6aa9c0ce7484b8}{split\+Sor}} (const std::\+string \&sor, std::\+string kulcsok\+[$\,$]\+, std::\+string ertekek\+[$\,$]\+, int \&db)
+\begin{DoxyCompactList}\small\item\em Segedfv -\/ string feldarabolas kulcs:\+ertek parokra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classParser}{Parser} osztaly tagfuggvenyeinek megvalositasa. Beolvasas, tarolas, kereses es listazas funkciok. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{Parser_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Parser_8cpp_a897f49f42aa9d260aa6aa9c0ce7484b8}\index{Parser.cpp@{Parser.cpp}!splitSor@{splitSor}}
+\index{splitSor@{splitSor}!Parser.cpp@{Parser.cpp}}
+\doxysubsubsection{\texorpdfstring{splitSor()}{splitSor()}}
+{\footnotesize\ttfamily \label{Parser_8cpp_a897f49f42aa9d260aa6aa9c0ce7484b8} 
+void split\+Sor (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{sor}{, }\item[{std::\+string}]{kulcsok}{\+[$\,$]\+, }\item[{std::\+string}]{ertekek}{\+[$\,$]\+, }\item[{int \&}]{db}{}\end{DoxyParamCaption})}
+
+
+
+Segedfv -\/ string feldarabolas kulcs:\+ertek parokra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sor} & Feldolgozando sor \\
+\hline
+{\em kulcsok} & Kulcsok tombje (kimenet) \\
+\hline
+{\em ertekek} & Ertekek tombje (kimenet) \\
+\hline
+{\em db} & Parok szama (kimenet) \\
+\hline
+\end{DoxyParams}

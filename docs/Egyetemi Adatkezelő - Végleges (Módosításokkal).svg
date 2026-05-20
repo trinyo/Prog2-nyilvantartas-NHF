@@ -1,0 +1,352 @@
+<svg version="1.1" baseProfile="full" width="1252.0" height="872.0" viewBox="0 0 1252 872" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	<title >Egyetemi Adatkezelő - Végleges (Módosításokkal)</title>
+	<desc >#direction: right
+	#spacing: 40
+	#padding: 15
+	#fontSize: 10
+	#title: Egyetemi Adatkezelő - Végleges (Módosításokkal)
+	
+	[&lt;abstract&gt;Szemely|
+	  - nev: string
+	  - kod: string
+	  - email: string
+	  - csoportok: vector&lt;string&gt;
+	|
+	  + Szemely(n, k, e)
+	  + virtual ~Szemely()
+	  + virtual void kiir() const = 0
+	  + addCsoport(string cs)
+	  + getKod(): string
+	  + getCsoportSzam(): size_t
+	  + getCsoport(size_t i): string
+	  + setNev(string n)
+	  + setEmail(string e)
+	  + setKod(string k)
+	]
+	
+	[Szemely] &lt;:- [Hallgato]
+	[Szemely] &lt;:- [Oktato]
+	
+	[Hallgato|
+	  - szak: string
+	  - felev: int
+	  - hianyzas: int
+	  - zhPontok: vector&lt;double&gt;
+	  - nzh: double
+	  - vizsga: double
+	  - osztondij: bool
+	  - statusz: string
+	  - extra_pont: int
+	  - megjegyzes: string
+	|
+	  + Hallgato(n, k, e, szak, felev, zh)
+	  + Hallgato(szak, felev, zh)
+	  + void kiir() const
+	  + kiir(ostream&amp; out) const
+	  + addZH(double p)
+	  + setOsztondij(bool o)
+	  + getNzh() const: double
+	  + setNzh(double n)
+	  + getOsztondij() const: bool
+	  + getStatusz() const: string
+	  + setEmail(string e)
+	  + setFelev(int f)
+	  + setStatusz(string s)
+	  + setVizsga(double v)
+	  + setHianyzas(int h)
+	]
+	
+	[Oktato|
+	  - titulus: string
+	  - tanszek: string
+	  - iroda: string
+	  - targy: string
+	  - konzultacio: string
+	  - maxCsop: int
+	|
+	  + Oktato(n, k, e, tit, tszk, iro, tg, konz, max)
+	  + Oktato(tit, tszk, iro, tg, konz, max)
+	  + virtual ~Oktato()
+	  + void kiir() const
+	  + kiir(ostream&amp; out) const
+	  + getTanszek() const: string
+	  + setEmail(string e)
+	  + setTanszek(string ts)
+	  + setIroda(string i)
+	  + setTargy(string t)
+	]
+	
+	[Parser|
+	  - adatok: vector&lt;Szemely*&gt;
+	|
+	  + Parser() = default
+	  + ~Parser()
+	  + beolvas(string file)
+	  + mentes(string file)
+	  + hozzaad(Szemely* uj)
+	  + keresKodAlapjan(string k): Szemely*
+	  + torol(string k): bool
+	  + getMeret() const: int
+	  + listazMindenkit()
+	  + listazHallgatok()
+	  + listazOktatok()
+	  + listazPZH_Kotelezettek()
+	  + listazOsztondijasok()
+	  + listazCsoportAlapjan(string cs)
+	  + listazTanszekAlapjan(string tszk)
+	  + listazKivaloStatuszuak()
+	|
+	  - sorFeldolgoz(string sor)
+	]
+	
+	[Parser] o-&gt; [Szemely]
+	
+	[Menu|
+	  - parser: Parser&amp;
+	|
+	  + Menu(Parser&amp; p)
+	  + start()
+	  - displayMainMenu()
+	  - displayListMenu()
+	  - displayNewDataMenu()
+	  - displayDataManagementMenu()
+	  - listMenuLoop()
+	  - newDataMenuLoop()
+	  - dataManagementMenuLoop()
+	  - fileMenuLoop()
+	  - clearScreen()
+	  - waitForEnter()
+	]
+	
+	[Menu] -&gt; [Parser]
+	</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="10pt" font-family="Helvetica" font-weight="normal" font-style="normal">
+		<g font-family="Helvetica" font-size="10pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
+			<g stroke="transparent" fill="transparent">
+				<rect x="0.0" y="0.0" height="872.0" width="1252.0" stroke="none"></rect>
+			</g>
+			<g transform="translate(15, 15)" fill="#33322E">
+				<g transform="translate(20, 20)" fill="#33322E" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal">
+					<path d="M816.9 273.6 L849 221 L900 221 L900.0 221.0 " fill="none"></path>
+					<path d="M812.3 270.8 L816.9 273.6 L821.4 276.4 L809.9 285.0 Z"></path>
+					<path d="M816.9 589.4 L849 642 L869 642 L869.0 642.0 " fill="none"></path>
+					<path d="M821.4 586.6 L816.9 589.4 L812.3 592.2 L809.9 578.0 Z"></path>
+					<path d="M590.7 431.5 L592 431.5 L605.3333333333334 431.5 L605.3 431.5 " fill="none"></path>
+					<path d="M598.7 436.8 L605.3 431.5 L598.7 426.2 L612.0 431.5 Z"></path>
+					<g fill="#eee8d5">
+						<path d="M581.3 426.2 L590.7 431.5 L581.3 436.8 L572.0 431.5 Z"></path>
+					</g>
+					<path d="M249.0 431.5 L269 431.5 L282.3333333333333 431.5 L282.3 431.5 " fill="none"></path>
+					<path d="M275.7 436.8 L282.3 431.5 L275.7 426.2 L289.0 431.5 Z"></path>
+					<g data-name="Szemely">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Szemely">
+							<rect x="612.0" y="285.0" height="293.0" width="217.0" data-name="Szemely"></rect>
+							<path d="M612.0 329.0 L829.0 329.0" fill="none" data-name="Szemely"></path>
+							<path d="M612.0 413.0 L829.0 413.0" fill="none" data-name="Szemely"></path>
+						</g>
+						<g transform="translate(612, 285)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="italic" data-name="Szemely" data-compartment="0">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="center" data-name="Szemely" data-compartment="0">
+								<text x="93.5" y="11.8" stroke="none" text-anchor="middle" data-name="Szemely" data-compartment="0">Szemely</text>
+								
+							</g>
+						</g>
+						<g transform="translate(612, 329)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Szemely" data-compartment="1">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Szemely" data-compartment="1">
+								<text x="0.0" y="11.8" stroke="none" data-name="Szemely" data-compartment="1">- nev: string</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Szemely" data-compartment="1">- kod: string</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Szemely" data-compartment="1">- email: string</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Szemely" data-compartment="1">- csoportok: vector&lt;string&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(612, 413)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Szemely" data-compartment="2">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Szemely" data-compartment="2">
+								<text x="0.0" y="11.8" stroke="none" data-name="Szemely" data-compartment="2">+ Szemely(n, k, e)</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Szemely" data-compartment="2">+ virtual ~Szemely()</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Szemely" data-compartment="2">+ virtual void kiir() const = 0</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Szemely" data-compartment="2">+ addCsoport(string cs)</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Szemely" data-compartment="2">+ getKod(): string</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Szemely" data-compartment="2">+ getCsoportSzam(): size_t</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Szemely" data-compartment="2">+ getCsoport(size_t i): string</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Szemely" data-compartment="2">+ setNev(string n)</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Szemely" data-compartment="2">+ setEmail(string e)</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Szemely" data-compartment="2">+ setKod(string k)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Hallgato">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Hallgato">
+							<rect x="900.0" y="0.0" height="442.0" width="251.0" data-name="Hallgato"></rect>
+							<path d="M900.0 44.0 L1151.0 44.0" fill="none" data-name="Hallgato"></path>
+							<path d="M900.0 209.0 L1151.0 209.0" fill="none" data-name="Hallgato"></path>
+						</g>
+						<g transform="translate(900, 0)" font-family="Helvetica" font-size="10pt" font-weight="bold" font-style="normal" data-name="Hallgato" data-compartment="0">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="center" data-name="Hallgato" data-compartment="0">
+								<text x="110.5" y="11.8" stroke="none" text-anchor="middle" data-name="Hallgato" data-compartment="0">Hallgato</text>
+								
+							</g>
+						</g>
+						<g transform="translate(900, 44)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Hallgato" data-compartment="1">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Hallgato" data-compartment="1">
+								<text x="0.0" y="11.8" stroke="none" data-name="Hallgato" data-compartment="1">- szak: string</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Hallgato" data-compartment="1">- felev: int</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Hallgato" data-compartment="1">- hianyzas: int</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Hallgato" data-compartment="1">- zhPontok: vector&lt;double&gt;</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Hallgato" data-compartment="1">- nzh: double</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Hallgato" data-compartment="1">- vizsga: double</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Hallgato" data-compartment="1">- osztondij: bool</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Hallgato" data-compartment="1">- statusz: string</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Hallgato" data-compartment="1">- extra_pont: int</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Hallgato" data-compartment="1">- megjegyzes: string</text>
+								
+							</g>
+						</g>
+						<g transform="translate(900, 209)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Hallgato" data-compartment="2">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Hallgato" data-compartment="2">
+								<text x="0.0" y="11.8" stroke="none" data-name="Hallgato" data-compartment="2">+ Hallgato(n, k, e, szak, felev, zh)</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Hallgato" data-compartment="2">+ Hallgato(szak, felev, zh)</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Hallgato" data-compartment="2">+ void kiir() const</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Hallgato" data-compartment="2">+ kiir(ostream&amp; out) const</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Hallgato" data-compartment="2">+ addZH(double p)</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Hallgato" data-compartment="2">+ setOsztondij(bool o)</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Hallgato" data-compartment="2">+ getNzh() const: double</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Hallgato" data-compartment="2">+ setNzh(double n)</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Hallgato" data-compartment="2">+ getOsztondij() const: bool</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Hallgato" data-compartment="2">+ getStatusz() const: string</text>
+								<text x="0.0" y="146.8" stroke="none" data-name="Hallgato" data-compartment="2">+ setEmail(string e)</text>
+								<text x="0.0" y="160.3" stroke="none" data-name="Hallgato" data-compartment="2">+ setFelev(int f)</text>
+								<text x="0.0" y="173.8" stroke="none" data-name="Hallgato" data-compartment="2">+ setStatusz(string s)</text>
+								<text x="0.0" y="187.3" stroke="none" data-name="Hallgato" data-compartment="2">+ setVizsga(double v)</text>
+								<text x="0.0" y="200.8" stroke="none" data-name="Hallgato" data-compartment="2">+ setHianyzas(int h)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Oktato">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Oktato">
+							<rect x="869.0" y="482.0" height="320.0" width="313.0" data-name="Oktato"></rect>
+							<path d="M869.0 526.0 L1182.0 526.0" fill="none" data-name="Oktato"></path>
+							<path d="M869.0 637.0 L1182.0 637.0" fill="none" data-name="Oktato"></path>
+						</g>
+						<g transform="translate(869, 482)" font-family="Helvetica" font-size="10pt" font-weight="bold" font-style="normal" data-name="Oktato" data-compartment="0">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="center" data-name="Oktato" data-compartment="0">
+								<text x="141.5" y="11.8" stroke="none" text-anchor="middle" data-name="Oktato" data-compartment="0">Oktato</text>
+								
+							</g>
+						</g>
+						<g transform="translate(869, 526)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Oktato" data-compartment="1">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Oktato" data-compartment="1">
+								<text x="0.0" y="11.8" stroke="none" data-name="Oktato" data-compartment="1">- titulus: string</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Oktato" data-compartment="1">- tanszek: string</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Oktato" data-compartment="1">- iroda: string</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Oktato" data-compartment="1">- targy: string</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Oktato" data-compartment="1">- konzultacio: string</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Oktato" data-compartment="1">- maxCsop: int</text>
+								
+							</g>
+						</g>
+						<g transform="translate(869, 637)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Oktato" data-compartment="2">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Oktato" data-compartment="2">
+								<text x="0.0" y="11.8" stroke="none" data-name="Oktato" data-compartment="2">+ Oktato(n, k, e, tit, tszk, iro, tg, konz, max)</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Oktato" data-compartment="2">+ Oktato(tit, tszk, iro, tg, konz, max)</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Oktato" data-compartment="2">+ virtual ~Oktato()</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Oktato" data-compartment="2">+ void kiir() const</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Oktato" data-compartment="2">+ kiir(ostream&amp; out) const</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Oktato" data-compartment="2">+ getTanszek() const: string</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Oktato" data-compartment="2">+ setEmail(string e)</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Oktato" data-compartment="2">+ setTanszek(string ts)</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Oktato" data-compartment="2">+ setIroda(string i)</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Oktato" data-compartment="2">+ setTargy(string t)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Parser">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Parser">
+							<rect x="289.0" y="242.5" height="378.0" width="283.0" data-name="Parser"></rect>
+							<path d="M289.0 286.5 L572.0 286.5" fill="none" data-name="Parser"></path>
+							<path d="M289.0 330.5 L572.0 330.5" fill="none" data-name="Parser"></path>
+							<path d="M289.0 576.5 L572.0 576.5" fill="none" data-name="Parser"></path>
+						</g>
+						<g transform="translate(289, 242.5)" font-family="Helvetica" font-size="10pt" font-weight="bold" font-style="normal" data-name="Parser" data-compartment="0">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="center" data-name="Parser" data-compartment="0">
+								<text x="126.5" y="11.8" stroke="none" text-anchor="middle" data-name="Parser" data-compartment="0">Parser</text>
+								
+							</g>
+						</g>
+						<g transform="translate(289, 286.5)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Parser" data-compartment="1">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Parser" data-compartment="1">
+								<text x="0.0" y="11.8" stroke="none" data-name="Parser" data-compartment="1">- adatok: vector&lt;Szemely*&gt;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(289, 330.5)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Parser" data-compartment="2">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Parser" data-compartment="2">
+								<text x="0.0" y="11.8" stroke="none" data-name="Parser" data-compartment="2">+ Parser() = default</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Parser" data-compartment="2">+ ~Parser()</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Parser" data-compartment="2">+ beolvas(string file)</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Parser" data-compartment="2">+ mentes(string file)</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Parser" data-compartment="2">+ hozzaad(Szemely* uj)</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Parser" data-compartment="2">+ keresKodAlapjan(string k): Szemely*</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Parser" data-compartment="2">+ torol(string k): bool</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Parser" data-compartment="2">+ getMeret() const: int</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Parser" data-compartment="2">+ listazMindenkit()</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Parser" data-compartment="2">+ listazHallgatok()</text>
+								<text x="0.0" y="146.8" stroke="none" data-name="Parser" data-compartment="2">+ listazOktatok()</text>
+								<text x="0.0" y="160.3" stroke="none" data-name="Parser" data-compartment="2">+ listazPZH_Kotelezettek()</text>
+								<text x="0.0" y="173.8" stroke="none" data-name="Parser" data-compartment="2">+ listazOsztondijasok()</text>
+								<text x="0.0" y="187.3" stroke="none" data-name="Parser" data-compartment="2">+ listazCsoportAlapjan(string cs)</text>
+								<text x="0.0" y="200.8" stroke="none" data-name="Parser" data-compartment="2">+ listazTanszekAlapjan(string tszk)</text>
+								<text x="0.0" y="214.3" stroke="none" data-name="Parser" data-compartment="2">+ listazKivaloStatuszuak()</text>
+								
+							</g>
+						</g>
+						<g transform="translate(289, 576.5)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Parser" data-compartment="3">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Parser" data-compartment="3">
+								<text x="0.0" y="11.8" stroke="none" data-name="Parser" data-compartment="3">- sorFeldolgoz(string sor)</text>
+								
+							</g>
+						</g>
+					</g>
+					<g data-name="Menu">
+						<g fill="#eee8d5" stroke="#33322E" data-name="Menu">
+							<rect x="0.0" y="291.5" height="280.0" width="249.0" data-name="Menu"></rect>
+							<path d="M0.0 335.5 L249.0 335.5" fill="none" data-name="Menu"></path>
+							<path d="M0.0 379.5 L249.0 379.5" fill="none" data-name="Menu"></path>
+						</g>
+						<g transform="translate(0, 291.5)" font-family="Helvetica" font-size="10pt" font-weight="bold" font-style="normal" data-name="Menu" data-compartment="0">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="center" data-name="Menu" data-compartment="0">
+								<text x="109.5" y="11.8" stroke="none" text-anchor="middle" data-name="Menu" data-compartment="0">Menu</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 335.5)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Menu" data-compartment="1">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Menu" data-compartment="1">
+								<text x="0.0" y="11.8" stroke="none" data-name="Menu" data-compartment="1">- parser: Parser&amp;</text>
+								
+							</g>
+						</g>
+						<g transform="translate(0, 379.5)" font-family="Helvetica" font-size="10pt" font-weight="normal" font-style="normal" data-name="Menu" data-compartment="2">
+							<g transform="translate(15, 15)" fill="#33322E" text-align="left" data-name="Menu" data-compartment="2">
+								<text x="0.0" y="11.8" stroke="none" data-name="Menu" data-compartment="2">+ Menu(Parser&amp; p)</text>
+								<text x="0.0" y="25.3" stroke="none" data-name="Menu" data-compartment="2">+ start()</text>
+								<text x="0.0" y="38.8" stroke="none" data-name="Menu" data-compartment="2">- displayMainMenu()</text>
+								<text x="0.0" y="52.3" stroke="none" data-name="Menu" data-compartment="2">- displayListMenu()</text>
+								<text x="0.0" y="65.8" stroke="none" data-name="Menu" data-compartment="2">- displayNewDataMenu()</text>
+								<text x="0.0" y="79.3" stroke="none" data-name="Menu" data-compartment="2">- displayDataManagementMenu()</text>
+								<text x="0.0" y="92.8" stroke="none" data-name="Menu" data-compartment="2">- listMenuLoop()</text>
+								<text x="0.0" y="106.3" stroke="none" data-name="Menu" data-compartment="2">- newDataMenuLoop()</text>
+								<text x="0.0" y="119.8" stroke="none" data-name="Menu" data-compartment="2">- dataManagementMenuLoop()</text>
+								<text x="0.0" y="133.3" stroke="none" data-name="Menu" data-compartment="2">- fileMenuLoop()</text>
+								<text x="0.0" y="146.8" stroke="none" data-name="Menu" data-compartment="2">- clearScreen()</text>
+								<text x="0.0" y="160.3" stroke="none" data-name="Menu" data-compartment="2">- waitForEnter()</text>
+								
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

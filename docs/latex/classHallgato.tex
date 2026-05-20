@@ -1,0 +1,237 @@
+\doxysection{Hallgato Class Reference}
+\hypertarget{classHallgato}{}\label{classHallgato}\index{Hallgato@{Hallgato}}
+
+
+Hallgatoi nyilvantartas adatait kezelo osztaly.  
+
+
+
+
+{\ttfamily \+\#include $<$Hallgato.\+h$>$}
+
+Inheritance diagram for Hallgato:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHallgato}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classHallgato_a055894b401ae02df9ced41d9720543b0}{Hallgato}} (std::\+string n, std::\+string k, std::\+string e, std::\+string sz, int felev, int zh\+Szam)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classHallgato_a18ff3e71dcd97453351ee5167073de4f}{Hallgato}} (std::\+string szak, int felev, int zh\+Szam)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{classHallgato_ae489f8c96675429fc5b1dcd23e93c9ad}{\texorpdfstring{$\sim$}{\string~}\+Hallgato}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{classHallgato_a57060ae30c91a600f6e9704305a24043}{kiir}} () const
+\begin{DoxyCompactList}\small\item\em Adatok kiirasa a konzolra. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classHallgato_a9375611a7342775e4bf0835cbe9c688c}{add\+ZH}} (double p)
+\begin{DoxyCompactList}\small\item\em ZH pont hozzaadasa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classHallgato_ad50308c6c2283ff5ec36779417fe65ea}{set\+Osztondij}} (bool o)
+\begin{DoxyCompactList}\small\item\em Osztondij beallitasa. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{classHallgato_a34cbe1bb08ca981c320aeb49fe5b2da3}{get\+Nzh}} () const
+\begin{DoxyCompactList}\small\item\em NZH pontszam lekerese. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classHallgato_a6c9863dd1cd4125ad3d4133bf4265a0c}{get\+Osztondij}} () const
+\begin{DoxyCompactList}\small\item\em Osztondij jogosultsag lekerese. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classHallgato_a75210bc5a71785c1b7e869d94db33bf6}{get\+Statusz}} () const
+\begin{DoxyCompactList}\small\item\em Statusz lekerese. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{classSzemely}{Szemely}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classSzemely_aabc575221edae2931a6e6282980da1f8}{Szemely}} (std::\+string n, std::\+string k, std::\+string e)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{classSzemely_a0042884387ecd46469b05f6af89a2253}{\texorpdfstring{$\sim$}{\string~}\+Szemely}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classSzemely_a5415f02f1a87753dfff8d093e746063e}{add\+Csoport}} (std::\+string cs)
+\begin{DoxyCompactList}\small\item\em Uj csoport hozzaadasa. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classSzemely_ab85865a920d7e2d711e9497e2e568ff6}{get\+Kod}} ()
+\begin{DoxyCompactList}\small\item\em Egyedi kód lekérése. \end{DoxyCompactList}\item 
+size\+\_\+t \doxymbox{\hyperlink{classSzemely_afd5839b25f0cbbc1e420004de7733341}{get\+Csoport\+Szam}} ()
+\begin{DoxyCompactList}\small\item\em Csoportok számának lekérése. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{classSzemely_a628fc39603b3f506910daf8e1be9b805}{get\+Csoport}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Csoport lekerese index alapjan. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hallgatoi nyilvantartas adatait kezelo osztaly. 
+
+Leszarmaztatott osztaly a \doxylink{classSzemely}{Szemely} alaposztalybol. Tarolja a hallgatoi specifikus adatokat:\+ szak, felev, ZH pontok, stb. 
+
+\label{doc-constructors}
+\Hypertarget{classHallgato_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHallgato_a055894b401ae02df9ced41d9720543b0}\index{Hallgato@{Hallgato}!Hallgato@{Hallgato}}
+\index{Hallgato@{Hallgato}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{Hallgato()}{Hallgato()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classHallgato_a055894b401ae02df9ced41d9720543b0} 
+Hallgato::\+\+Hallgato (\begin{DoxyParamCaption}\item[{std::\+string}]{n}{, }\item[{std::\+string}]{k}{, }\item[{std::\+string}]{e}{, }\item[{std::\+string}]{sz}{, }\item[{int}]{fv}{, }\item[{int}]{zh}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+Konstruktor -\/ teljes konstruktor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Nev \\
+\hline
+{\em k} & Kod \\
+\hline
+{\em e} & Email \\
+\hline
+{\em szak} & Szak megnevezese \\
+\hline
+{\em felev} & Felev szam \\
+\hline
+{\em zh\+Szam} & ZH-\/k szama\\
+\hline
+{\em n} & Nev \\
+\hline
+{\em k} & Kod \\
+\hline
+{\em e} & Email \\
+\hline
+{\em sz} & Szak \\
+\hline
+{\em fv} & Felev szama \\
+\hline
+{\em zh} & ZH-\/k szama \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHallgato_a18ff3e71dcd97453351ee5167073de4f}\index{Hallgato@{Hallgato}!Hallgato@{Hallgato}}
+\index{Hallgato@{Hallgato}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{Hallgato()}{Hallgato()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classHallgato_a18ff3e71dcd97453351ee5167073de4f} 
+Hallgato::\+\+Hallgato (\begin{DoxyParamCaption}\item[{std::\+string}]{sz}{, }\item[{int}]{fv}{, }\item[{int}]{zh}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+Konstruktor -\/ alap konstruktor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em szak} & Szak megnevezese \\
+\hline
+{\em felev} & Felev szam \\
+\hline
+{\em zh\+Szam} & ZH-\/k szama\\
+\hline
+{\em sz} & Szak \\
+\hline
+{\em fv} & Felev szama \\
+\hline
+{\em zh} & ZH-\/k szama \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHallgato_ae489f8c96675429fc5b1dcd23e93c9ad}\index{Hallgato@{Hallgato}!````~Hallgato@{\texorpdfstring{$\sim$}{\string~}Hallgato}}
+\index{````~Hallgato@{\texorpdfstring{$\sim$}{\string~}Hallgato}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Hallgato()}{\string~Hallgato()}}
+{\footnotesize\ttfamily \label{classHallgato_ae489f8c96675429fc5b1dcd23e93c9ad} 
+Hallgato::\+\texorpdfstring{$\sim$}{\string~}\+Hallgato (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destruktor. 
+
+Destruktor -\/ felszabaditja a dinamikusan foglalt memoryat. 
+
+\label{doc-func-members}
+\Hypertarget{classHallgato_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHallgato_a9375611a7342775e4bf0835cbe9c688c}\index{Hallgato@{Hallgato}!addZH@{addZH}}
+\index{addZH@{addZH}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{addZH()}{addZH()}}
+{\footnotesize\ttfamily \label{classHallgato_a9375611a7342775e4bf0835cbe9c688c} 
+void Hallgato::\+add\+ZH (\begin{DoxyParamCaption}\item[{double}]{p}{}\end{DoxyParamCaption})}
+
+
+
+ZH pont hozzaadasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Pontszam \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classHallgato_a34cbe1bb08ca981c320aeb49fe5b2da3}\index{Hallgato@{Hallgato}!getNzh@{getNzh}}
+\index{getNzh@{getNzh}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{getNzh()}{getNzh()}}
+{\footnotesize\ttfamily \label{classHallgato_a34cbe1bb08ca981c320aeb49fe5b2da3} 
+double Hallgato::\+get\+Nzh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+NZH pontszam lekerese. 
+
+\begin{DoxyReturn}{Returns}
+Nelso ZH pontszam 
+\end{DoxyReturn}
+\Hypertarget{classHallgato_a6c9863dd1cd4125ad3d4133bf4265a0c}\index{Hallgato@{Hallgato}!getOsztondij@{getOsztondij}}
+\index{getOsztondij@{getOsztondij}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{getOsztondij()}{getOsztondij()}}
+{\footnotesize\ttfamily \label{classHallgato_a6c9863dd1cd4125ad3d4133bf4265a0c} 
+bool Hallgato::\+get\+Osztondij (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Osztondij jogosultsag lekerese. 
+
+\begin{DoxyReturn}{Returns}
+Osztondij jogosultsag
+
+Osztondij jogosultsag (true/\+false) 
+\end{DoxyReturn}
+\Hypertarget{classHallgato_a75210bc5a71785c1b7e869d94db33bf6}\index{Hallgato@{Hallgato}!getStatusz@{getStatusz}}
+\index{getStatusz@{getStatusz}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{getStatusz()}{getStatusz()}}
+{\footnotesize\ttfamily \label{classHallgato_a75210bc5a71785c1b7e869d94db33bf6} 
+std::\+string Hallgato::\+get\+Statusz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Statusz lekerese. 
+
+\begin{DoxyReturn}{Returns}
+Statusz
+
+Hallgatoi statusz 
+\end{DoxyReturn}
+\Hypertarget{classHallgato_a57060ae30c91a600f6e9704305a24043}\index{Hallgato@{Hallgato}!kiir@{kiir}}
+\index{kiir@{kiir}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{kiir()}{kiir()}}
+{\footnotesize\ttfamily \label{classHallgato_a57060ae30c91a600f6e9704305a24043} 
+void Hallgato::\+kiir (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adatok kiirasa a konzolra. 
+
+\doxylink{classHallgato}{Hallgato} adatainak kirasa a konzolra. 
+
+Implements \doxymbox{\hyperlink{classSzemely_a043d3fa51132a46b89f7cc0d7b0f9f77}{Szemely}}.
+
+\Hypertarget{classHallgato_ad50308c6c2283ff5ec36779417fe65ea}\index{Hallgato@{Hallgato}!setOsztondij@{setOsztondij}}
+\index{setOsztondij@{setOsztondij}!Hallgato@{Hallgato}}
+\doxysubsubsection{\texorpdfstring{setOsztondij()}{setOsztondij()}}
+{\footnotesize\ttfamily \label{classHallgato_ad50308c6c2283ff5ec36779417fe65ea} 
+void Hallgato::\+set\+Osztondij (\begin{DoxyParamCaption}\item[{bool}]{o}{}\end{DoxyParamCaption})}
+
+
+
+Osztondij beallitasa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Osztondij jogosultsag \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+include/\+Hallgato.\+h\item 
+src/\+\doxymbox{\hyperlink{Hallgato_8cpp}{Hallgato.\+cpp}}\end{DoxyCompactItemize}

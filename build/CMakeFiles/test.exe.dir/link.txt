@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/test.exe.dir/link.d CMakeFiles/test.exe.dir/src/test.cpp.o CMakeFiles/test.exe.dir/src/Szemely.cpp.o CMakeFiles/test.exe.dir/src/Hallgato.cpp.o CMakeFiles/test.exe.dir/src/Oktato.cpp.o CMakeFiles/test.exe.dir/src/Parser.cpp.o CMakeFiles/test.exe.dir/src/memtrace.cpp.o -o test.exe
