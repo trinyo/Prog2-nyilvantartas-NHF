@@ -1,0 +1,42 @@
+Tipus:Oktato;Nev:Dr. Tóth Pál;Kod:TP01;Titulus:PhD;Tanszek:IIT;Iroda:I-123;Targy:Programozás 1;Email:toth.pal@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Nagy Mária;Kod:NM02;Titulus:MSc;Tanszek:TMIT;Iroda:II-204;Targy:Adatbázisok;Email:nagy.maria@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Kovács János;Kod:KJ03;Titulus:PhD;Tanszek:VIT;Iroda:III-45;Targy:Számítógép hálózatok;Email:kovacs.j@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Szabó Eszter;Kod:SE04;Titulus:PhD;Tanszek:IIT;Iroda:I-005;Targy:Szoftver labor;Email:szabo.eszter@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Tóth Gábor;Kod:TG05;Titulus:MSc;Tanszek:TMIT;Iroda:II-101;Targy:Web technológiák;Email:toth.gabor@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Horváth Anna;Kod:HA06;Titulus:PhD;Tanszek:IIT;Iroda:I-222;Targy:Algoritmusok;Email:horvath.anna@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Kiss Béla;Kod:KB07;Titulus:MSc;Tanszek:VIT;Iroda:III-12;Targy:Műszaki dokumentáció;Email:kiss.bela@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Papp Rita;Kod:PR08;Titulus:PhD;Tanszek:TMIT;Iroda:II-301;Targy:XML technológiák;Email:papp.rita@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Farkas László;Kod:FL09;Titulus:PhD;Tanszek:IIT;Iroda:I-044;Targy:Programtervezés;Email:farkas.l@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Balogh Éva;Kod:BE10;Titulus:MSc;Tanszek:VIT;Iroda:III-88;Targy:Grafika;Email:balogh.eva@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Szekér Andrea;Kod:SA11;Titulus:PhD;Tanszek:IIT;Iroda:I-330;Targy:Adatstruktúrák;Email:szeker.andrea@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Varga Mihály;Kod:VM12;Titulus:MSc;Tanszek:TMIT;Iroda:II-201;Targy:Adatbázis 2;Email:varga.mihaly@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Nagy Barbara;Kod:NB13;Titulus:PhD;Tanszek:VIT;Iroda:III-55;Targy:Hálózatbiztonság;Email:nagy.barbara@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Takács Gergő;Kod:TG14;Titulus:MSc;Tanszek:IIT;Iroda:I-112;Targy:Mobil alkalmazások;Email:takacs.gergo@uni-pannon.hu
+Tipus:Oktato;Nev:Dr. Lukács Eszter;Kod:LE15;Titulus:PhD;Tanszek:TMIT;Iroda:II-401;Targy:Mesterséges intelligencia;Email:lukacs.eszter@uni-pannon.hu
+Tipus:Hallgato;Nev:Kiss Anna;Kod:AABBCC;Szak:Mérnökinformatikus;Felev:2;Email:k.anna@stud.uni.hu;NZH:33.5;Vizsga:42;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Nagy Péter;Kod:NP001;Szak:Mérnökinformatikus;Felev:1;Email:n.peter@stud.uni.hu;NZH:91;Vizsga:95;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Szabó János;Kod:SJ002;Szak:Mérnökinformatikus;Felev:3;Email:s.janos@stud.uni.hu;NZH:60;Vizsga:72;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Kovács Mariann;Kod:KM003;Szak:Mérnökinformatikus;Felev:2;Email:k.mariann@stud.uni.hu;NZH:86;Vizsga:88;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Tóth Gergő;Kod:TG004;Szak:Mérnökinformatikus;Felev:4;Email:t.gergo@stud.uni.hu;NZH:43;Vizsga:55;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Lukács Viktória;Kod:LV005;Szak:Mérnökinformatikus;Felev:1;Email:l.viktoria@stud.uni.hu;NZH:97;Vizsga:98;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Balogh Tamás;Kod:BT006;Szak:Mérnökinformatikus;Felev:3;Email:b.tamas@stud.uni.hu;NZH:64;Vizsga:70;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Papp Nikolett;Kod:PN007;Szak:Mérnökinformatikus;Felev:2;Email:p.nikolett@stud.uni.hu;NZH:80;Vizsga:85;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Farkas Attila;Kod:FA008;Szak:Mérnökinformatikus;Felev:4;Email:f.attila@stud.uni.hu;NZH:27;Vizsga:35;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Horváth Eszter;Kod:HE009;Szak:Mérnökinformatikus;Felev:1;Email:h.eszter@stud.uni.hu;NZH:90;Vizsga:92;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Nagy Henriett;Kod:NH010;Szak:Mérnökinformatikus;Felev:3;Email:n.henriett@stud.uni.hu;NZH:52.5;Vizsga:60;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Kiss Bence;Kod:KB011;Szak:Mérnökinformatikus;Felev:2;Email:k.bence@stud.uni.hu;NZH:88;Vizsga:90;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Szentpéteri Gábor;Kod:SG012;Szak:Mérnökinformatikus;Felev:4;Email:s.gabor@stud.uni.hu;NZH:32.5;Vizsga:40;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Tóth Adrienn;Kod:TA013;Szak:Mérnökinformatikus;Felev:1;Email:t.adrienn@stud.uni.hu;NZH:97;Vizsga:99;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Kovács Zoltán;Kod:KZ014;Szak:Mérnökinformatikus;Felev:3;Email:k.zoltan@stud.uni.hu;NZH:57.5;Vizsga:65;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Molnár Szonja;Kod:MS015;Szak:Mérnökinformatikus;Felev:2;Email:m.szonja@stud.uni.hu;NZH:83.5;Vizsga:86;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Brown Michael;Kod:BM016;Szak:Mérnökinformatikus;Felev:4;Email:b.michael@stud.uni.hu;NZH:19;Vizsga:25;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Smith Jennifer;Kod:SJ017;Szak:Mérnökinformatikus;Felev:1;Email:s.jennifer@stud.uni.hu;NZH:99.5;Vizsga:100;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Györgyi Dániel;Kod:GD018;Szak:Mérnökinformatikus;Felev:3;Email:g.daniel@stud.uni.hu;NZH:64;Vizsga:68;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Varga Róbert;Kod:VR019;Szak:Mérnökinformatikus;Felev:2;Email:v.robert@stud.uni.hu;NZH:78.5;Vizsga:82;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Simon Petra;Kod:SP020;Szak:Mérnökinformatikus;Felev:4;Email:s.petra@stud.uni.hu;NZH:38.5;Vizsga:45;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Orbán Roland;Kod:OR021;Szak:Mérnökinformatikus;Felev:1;Email:o.roland@stud.uni.hu;NZH:92;Vizsga:94;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Németh Kata;Kod:NK022;Szak:Mérnökinformatikus;Felev:2;Email:n.kata@stud.uni.hu;NZH:85;Vizsga:88;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Fehér Dávid;Kod:FD023;Szak:Mérnökinformatikus;Felev:3;Email:f.david@stud.uni.hu;NZH:71;Vizsga:75;Osztondij:Nem;Statusz:aktiv
+Tipus:Hallgato;Nev:Jakab Luca;Kod:JL024;Szak:Mérnökinformatikus;Felev:1;Email:j.luca@stud.uni.hu;NZH:97;Vizsga:99;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:Kádár Kitti;Kod:KK025;Szak:Mérnökinformatikus;Felev:2;Email:k.kitti@stud.uni.hu;NZH:93.5;Vizsga:95;Osztondij:Igen;Statusz:aktiv
+Tipus:Hallgato;Nev:asd;Kod:asdasd;Szak:asd;Felev:2;Email:asd;NZH:0;Vizsga:0;Osztondij:Nem;Statusz:aktiv

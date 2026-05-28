@@ -1,7 +1,7 @@
 CMakeFiles/test.exe.dir/src/test.cpp.o: \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/test.cpp \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/test.cpp \
  /usr/include/stdc-predef.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/gtest_lite.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/gtest_lite.h \
  /usr/include/c++/16.1.1/iostream \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -205,7 +205,7 @@ CMakeFiles/test.exe.dir/src/test.cpp.o: \
  /usr/include/c++/16.1.1/bits/regex.tcc \
  /usr/include/c++/16.1.1/bits/regex_executor.h \
  /usr/include/c++/16.1.1/bits/regex_executor.tcc \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h \
  /usr/include/c++/16.1.1/stdlib.h /usr/include/c++/16.1.1/sstream \
  /usr/include/c++/16.1.1/bits/sstream.tcc /usr/include/c++/16.1.1/vector \
  /usr/include/c++/16.1.1/list /usr/include/c++/16.1.1/bits/stl_list.h \
@@ -227,9 +227,9 @@ CMakeFiles/test.exe.dir/src/test.cpp.o: \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/opt_random.h \
  /usr/include/c++/16.1.1/bits/random.tcc /usr/include/c++/16.1.1/numeric \
  /usr/include/c++/16.1.1/bits/stl_numeric.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/Szemely.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/Hallgato.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/Szemely.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/Oktato.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/Parser.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/Szemely.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/Hallgato.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/Szemely.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/Oktato.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/Parser.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h

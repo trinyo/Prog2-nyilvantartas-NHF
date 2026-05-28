@@ -726,7 +726,7 @@ void Menu::fileMenuLoop() {
     }
 
     std::string projDir = __FILE__;
-    projDir = projDir.substr(0, projDir.rfind("/src/main.cpp"));
+    projDir = projDir.substr(0, projDir.rfind("/src/Menu.cpp"));
     parser.beolvas(projDir + "/data/" + fajlNev);
     std::cout << "\nSikeres betoltes!" << std::endl;
     waitForEnter();
@@ -745,7 +745,7 @@ void Menu::fileMenuLoop() {
     }
 
     std::string projDir = __FILE__;
-    projDir = projDir.substr(0, projDir.rfind("/src/main.cpp"));
+    projDir = projDir.substr(0, projDir.rfind("/src/Menu.cpp"));
     parser.mentes(projDir + "/data/" + fajlNev);
     std::cout << "\nSikeres mentes!" << std::endl;
     waitForEnter();

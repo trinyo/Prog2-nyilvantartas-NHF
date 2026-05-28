@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DMEMTRACE
 
-CXX_INCLUDES = -I/home/ezt/Documents/Prog2-nyilvantartas-NHF/include
+CXX_INCLUDES = -I/home/zoll/Documents/Prog2-nyilvantartas-NHF/include
 
 CXX_FLAGS = -std=gnu++11 -Wall -Wextra -Werror -g
 

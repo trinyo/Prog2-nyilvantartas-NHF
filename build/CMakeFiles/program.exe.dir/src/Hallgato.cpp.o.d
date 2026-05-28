@@ -1,8 +1,8 @@
 CMakeFiles/program.exe.dir/src/Hallgato.cpp.o: \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp \
  /usr/include/stdc-predef.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/Hallgato.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/Szemely.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/Hallgato.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/Szemely.h \
  /usr/include/c++/16.1.1/vector \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -148,7 +148,7 @@ CMakeFiles/program.exe.dir/src/Hallgato.cpp.o: \
  /usr/include/c++/16.1.1/bits/basic_ios.tcc \
  /usr/include/c++/16.1.1/bits/ostream_print.h \
  /usr/include/c++/16.1.1/bits/ostream.tcc \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/memtrace.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/memtrace.h \
  /usr/include/c++/16.1.1/stdlib.h /usr/include/c++/16.1.1/iostream \
  /usr/include/c++/16.1.1/istream /usr/include/c++/16.1.1/bits/istream.tcc \
  /usr/include/c++/16.1.1/fstream /usr/include/c++/16.1.1/bits/codecvt.h \

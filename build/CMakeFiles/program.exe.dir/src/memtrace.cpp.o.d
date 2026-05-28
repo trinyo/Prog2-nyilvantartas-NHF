@@ -1,5 +1,5 @@
 CMakeFiles/program.exe.dir/src/memtrace.cpp.o: \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
@@ -41,7 +41,7 @@ CMakeFiles/program.exe.dir/src/memtrace.cpp.o: \
  /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h /usr/include/ctype.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/include/memtrace.h \
  /usr/include/c++/16.1.1/new /usr/include/c++/16.1.1/bits/exception.h \
  /usr/include/c++/16.1.1/bits/version.h \
  /usr/include/c++/16.1.1/bits/new_except.h \

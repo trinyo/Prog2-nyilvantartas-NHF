@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ezt/Documents/Prog2-nyilvantartas-NHF
+CMAKE_SOURCE_DIR = /home/zoll/Documents/Prog2-nyilvantartas-NHF
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ezt/Documents/Prog2-nyilvantartas-NHF/build
+CMAKE_BINARY_DIR = /home/zoll/Documents/Prog2-nyilvantartas-NHF/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.exe.dir/depend.make
@@ -73,88 +73,88 @@ CMakeFiles/test.exe.dir/codegen:
 .PHONY : CMakeFiles/test.exe.dir/codegen
 
 CMakeFiles/test.exe.dir/src/test.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/test.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/test.cpp
+CMakeFiles/test.exe.dir/src/test.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/test.cpp
 CMakeFiles/test.exe.dir/src/test.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.exe.dir/src/test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/test.cpp.o -MF CMakeFiles/test.exe.dir/src/test.cpp.o.d -o CMakeFiles/test.exe.dir/src/test.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.exe.dir/src/test.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/test.cpp.o -MF CMakeFiles/test.exe.dir/src/test.cpp.o.d -o CMakeFiles/test.exe.dir/src/test.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/test.cpp
 
 CMakeFiles/test.exe.dir/src/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/test.cpp > CMakeFiles/test.exe.dir/src/test.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/test.cpp > CMakeFiles/test.exe.dir/src/test.cpp.i
 
 CMakeFiles/test.exe.dir/src/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/test.cpp -o CMakeFiles/test.exe.dir/src/test.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/test.cpp -o CMakeFiles/test.exe.dir/src/test.cpp.s
 
 CMakeFiles/test.exe.dir/src/Szemely.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/Szemely.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp
+CMakeFiles/test.exe.dir/src/Szemely.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp
 CMakeFiles/test.exe.dir/src/Szemely.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.exe.dir/src/Szemely.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Szemely.cpp.o -MF CMakeFiles/test.exe.dir/src/Szemely.cpp.o.d -o CMakeFiles/test.exe.dir/src/Szemely.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.exe.dir/src/Szemely.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Szemely.cpp.o -MF CMakeFiles/test.exe.dir/src/Szemely.cpp.o.d -o CMakeFiles/test.exe.dir/src/Szemely.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp
 
 CMakeFiles/test.exe.dir/src/Szemely.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/Szemely.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp > CMakeFiles/test.exe.dir/src/Szemely.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp > CMakeFiles/test.exe.dir/src/Szemely.cpp.i
 
 CMakeFiles/test.exe.dir/src/Szemely.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/Szemely.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp -o CMakeFiles/test.exe.dir/src/Szemely.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Szemely.cpp -o CMakeFiles/test.exe.dir/src/Szemely.cpp.s
 
 CMakeFiles/test.exe.dir/src/Hallgato.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/Hallgato.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp
+CMakeFiles/test.exe.dir/src/Hallgato.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp
 CMakeFiles/test.exe.dir/src/Hallgato.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.exe.dir/src/Hallgato.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Hallgato.cpp.o -MF CMakeFiles/test.exe.dir/src/Hallgato.cpp.o.d -o CMakeFiles/test.exe.dir/src/Hallgato.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.exe.dir/src/Hallgato.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Hallgato.cpp.o -MF CMakeFiles/test.exe.dir/src/Hallgato.cpp.o.d -o CMakeFiles/test.exe.dir/src/Hallgato.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp
 
 CMakeFiles/test.exe.dir/src/Hallgato.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/Hallgato.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp > CMakeFiles/test.exe.dir/src/Hallgato.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp > CMakeFiles/test.exe.dir/src/Hallgato.cpp.i
 
 CMakeFiles/test.exe.dir/src/Hallgato.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/Hallgato.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp -o CMakeFiles/test.exe.dir/src/Hallgato.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Hallgato.cpp -o CMakeFiles/test.exe.dir/src/Hallgato.cpp.s
 
 CMakeFiles/test.exe.dir/src/Oktato.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/Oktato.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp
+CMakeFiles/test.exe.dir/src/Oktato.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp
 CMakeFiles/test.exe.dir/src/Oktato.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.exe.dir/src/Oktato.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Oktato.cpp.o -MF CMakeFiles/test.exe.dir/src/Oktato.cpp.o.d -o CMakeFiles/test.exe.dir/src/Oktato.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.exe.dir/src/Oktato.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Oktato.cpp.o -MF CMakeFiles/test.exe.dir/src/Oktato.cpp.o.d -o CMakeFiles/test.exe.dir/src/Oktato.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp
 
 CMakeFiles/test.exe.dir/src/Oktato.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/Oktato.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp > CMakeFiles/test.exe.dir/src/Oktato.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp > CMakeFiles/test.exe.dir/src/Oktato.cpp.i
 
 CMakeFiles/test.exe.dir/src/Oktato.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/Oktato.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp -o CMakeFiles/test.exe.dir/src/Oktato.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Oktato.cpp -o CMakeFiles/test.exe.dir/src/Oktato.cpp.s
 
 CMakeFiles/test.exe.dir/src/Parser.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/Parser.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp
+CMakeFiles/test.exe.dir/src/Parser.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp
 CMakeFiles/test.exe.dir/src/Parser.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.exe.dir/src/Parser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Parser.cpp.o -MF CMakeFiles/test.exe.dir/src/Parser.cpp.o.d -o CMakeFiles/test.exe.dir/src/Parser.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.exe.dir/src/Parser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/Parser.cpp.o -MF CMakeFiles/test.exe.dir/src/Parser.cpp.o.d -o CMakeFiles/test.exe.dir/src/Parser.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp
 
 CMakeFiles/test.exe.dir/src/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/Parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp > CMakeFiles/test.exe.dir/src/Parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp > CMakeFiles/test.exe.dir/src/Parser.cpp.i
 
 CMakeFiles/test.exe.dir/src/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/Parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp -o CMakeFiles/test.exe.dir/src/Parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/Parser.cpp -o CMakeFiles/test.exe.dir/src/Parser.cpp.s
 
 CMakeFiles/test.exe.dir/src/memtrace.cpp.o: CMakeFiles/test.exe.dir/flags.make
-CMakeFiles/test.exe.dir/src/memtrace.cpp.o: /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp
+CMakeFiles/test.exe.dir/src/memtrace.cpp.o: /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp
 CMakeFiles/test.exe.dir/src/memtrace.cpp.o: CMakeFiles/test.exe.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.exe.dir/src/memtrace.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/memtrace.cpp.o -MF CMakeFiles/test.exe.dir/src/memtrace.cpp.o.d -o CMakeFiles/test.exe.dir/src/memtrace.cpp.o -c /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.exe.dir/src/memtrace.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.exe.dir/src/memtrace.cpp.o -MF CMakeFiles/test.exe.dir/src/memtrace.cpp.o.d -o CMakeFiles/test.exe.dir/src/memtrace.cpp.o -c /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp
 
 CMakeFiles/test.exe.dir/src/memtrace.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.exe.dir/src/memtrace.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp > CMakeFiles/test.exe.dir/src/memtrace.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp > CMakeFiles/test.exe.dir/src/memtrace.cpp.i
 
 CMakeFiles/test.exe.dir/src/memtrace.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.exe.dir/src/memtrace.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp -o CMakeFiles/test.exe.dir/src/memtrace.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/memtrace.cpp -o CMakeFiles/test.exe.dir/src/memtrace.cpp.s
 
 # Object files for target test.exe
 test_exe_OBJECTS = \
@@ -177,7 +177,7 @@ test.exe: CMakeFiles/test.exe.dir/src/memtrace.cpp.o
 test.exe: CMakeFiles/test.exe.dir/build.make
 test.exe: CMakeFiles/test.exe.dir/compiler_depend.ts
 test.exe: CMakeFiles/test.exe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.exe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -189,6 +189,6 @@ CMakeFiles/test.exe.dir/clean:
 .PHONY : CMakeFiles/test.exe.dir/clean
 
 CMakeFiles/test.exe.dir/depend:
-	cd /home/ezt/Documents/Prog2-nyilvantartas-NHF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ezt/Documents/Prog2-nyilvantartas-NHF /home/ezt/Documents/Prog2-nyilvantartas-NHF /home/ezt/Documents/Prog2-nyilvantartas-NHF/build /home/ezt/Documents/Prog2-nyilvantartas-NHF/build /home/ezt/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/test.exe.dir/DependInfo.cmake "--color=$(COLOR)" test.exe
+	cd /home/zoll/Documents/Prog2-nyilvantartas-NHF/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/zoll/Documents/Prog2-nyilvantartas-NHF /home/zoll/Documents/Prog2-nyilvantartas-NHF /home/zoll/Documents/Prog2-nyilvantartas-NHF/build /home/zoll/Documents/Prog2-nyilvantartas-NHF/build /home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/test.exe.dir/DependInfo.cmake "--color=$(COLOR)" test.exe
 .PHONY : CMakeFiles/test.exe.dir/depend
 

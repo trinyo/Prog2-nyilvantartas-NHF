@@ -1,7 +1,7 @@
 CMakeFiles/program.exe.dir/src/main.cpp.o: \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/main.cpp \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/Menu.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/Menu.h \
  /usr/include/c++/16.1.1/string \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -98,8 +98,8 @@ CMakeFiles/program.exe.dir/src/main.cpp.o: \
  /usr/include/c++/16.1.1/bits/functional_hash.h \
  /usr/include/c++/16.1.1/bits/hash_bytes.h \
  /usr/include/c++/16.1.1/bits/basic_string.tcc \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/Parser.h \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/Szemely.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/Parser.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/Szemely.h \
  /usr/include/c++/16.1.1/vector \
  /usr/include/c++/16.1.1/bits/stl_uninitialized.h \
  /usr/include/c++/16.1.1/bits/stl_vector.h \
@@ -151,7 +151,7 @@ CMakeFiles/program.exe.dir/src/main.cpp.o: \
  /usr/include/c++/16.1.1/bits/ostream_print.h \
  /usr/include/c++/16.1.1/bits/ostream.tcc /usr/include/c++/16.1.1/istream \
  /usr/include/c++/16.1.1/bits/istream.tcc \
- /home/ezt/Documents/Prog2-nyilvantartas-NHF/src/../include/memtrace.h \
+ /home/zoll/Documents/Prog2-nyilvantartas-NHF/src/../include/memtrace.h \
  /usr/include/c++/16.1.1/stdlib.h /usr/include/c++/16.1.1/fstream \
  /usr/include/c++/16.1.1/bits/codecvt.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
