@@ -1,4 +1,0 @@
-/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/program.exe.dir
-/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/test.exe.dir
-/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/edit_cache.dir
-/home/zoll/Documents/Prog2-nyilvantartas-NHF/build/CMakeFiles/rebuild_cache.dir

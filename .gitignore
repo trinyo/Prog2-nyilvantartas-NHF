@@ -1,0 +1,16 @@
+build/
+html/
+latex/
+docs/
+NHF3_Skeleton/
+NHF4_Vegleges/
+*.exe
+*.out
+nhf4_test
+Doxyfile
+doxy.config
+cmake-build-debug/
+data/adatok.csv
+data/asd
+data/asd2.csv
+data/asd.csv
